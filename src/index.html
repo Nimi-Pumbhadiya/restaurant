@@ -1,0 +1,1423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Restrochef | WorDo</title>
+  <meta name="author" content="Wordo" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+  <meta name="description" content="Restaurant is a powerful dashboard addon by Wordo for managing food orders, reservations, and menus seamlessly." />
+  <meta name="keywords" content="Restaurant, Food Dashboard, Restaurant Addon, Wordo, Restaurant Admin Panel, Food Order Management, Restaurant POS" />
+  <link rel="icon" href="assets/images/favicon.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/all.min.css" />
+  <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="./assets/css/tailwind.css" />
+</head>
+
+
+<body>
+    <div class="border-b text-sm py-3 hidden lg:block border-white/60">
+        <div class="md:container w-full mx-auto px-4">
+            <div class="flex items-center justify-between gap-6">
+                <ul class="flex itemx-center announcebar-wrp">
+                    <li class="pe-3 me-3 border-e border-white/60">
+                        <span class="me-2 inline-block font-semibold">Visit us :</span> Restrochef, Arrondissement, Canada 9578
+                    </li>
+                    <li>
+                        <span class="me-2 inline-block font-semibold">Call :</span>
+                        <a href="tel: +1 234 567 890" class="hover:text-primary transition-all duration-300">
+                        +1 234 567 890
+                    </a></li>
+                </ul>
+                <ul class="flex items-end announcebar-wrp">
+                    <li class="pe-3 me-3 border-e border-white/60">
+                        <span class="me-2 inline-block font-semibold">Email :</span>
+                        <a href="mailto: booking@gmail.com" class="hover:text-primary transition-all duration-300">
+                            booking@gmail.com
+                        </a>
+                    </li>
+                    <li>
+                        <ul class="flex items-center gap-4">
+                            <li class="hover:text-primary transition-all duration-300">
+                                <a href="javascript:void(0)"><i class="fa-brands fa-facebook-f"></i></a> 
+                            </li>
+                            <li class="hover:text-primary transition-all duration-300">
+                                <a href="javascript:void(0)"><i class="fa-brands fa-instagram"></i></a>                             
+                            </li>
+                            <li class="hover:text-primary transition-all duration-300">
+                                <a href="javascript:void(0)"><i class="fa-brands fa-pinterest-p"></i></a> 
+                            </li>
+                            <li class="hover:text-primary transition-all duration-300">
+                                <a href="javascript:void(0)"><i class="fa-brands fa-youtube"></i></a>                            
+                                </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <header class="shadow-md sticky bg-accent top-0 z-50 lg:border-white/20 border-b border-white">
+        <div class="md:container w-full mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <!-- Logo Section -->
+                <h1 class="logo">
+                    <a href="index.html" class="block lg:max-w-[170px] max-w-[120px] w-full">
+                        <img src="assets/images/logo.png" alt="Restaurant Logo" class="logo-img">
+                    </a>
+
+                </h1>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex items-center lg:gap-8 gap-4">
+                    <a href="index.html#menu" class="nav-link hover:text-primary transition-all duration-300 flex items-center gap-2">
+                        <i class="fas fa-utensils"></i> Menu
+                    </a>
+                    <a href="index.html#offer" class="nav-link hover:text-primary transition-all duration-300 flex items-center gap-2">
+                        <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15.2286 8.55338C15.1615 8.41611 15.1615 8.25868 15.2286 8.12144L15.8505 6.84919C16.1967 6.14081 15.9224 5.29649 15.2259 4.92695L13.975 4.26322C13.84 4.19164 13.7475 4.06424 13.7211 3.91381L13.4764 2.51897C13.3402 1.74236 12.6218 1.2205 11.8413 1.33094L10.4391 1.52927C10.2878 1.55064 10.1382 1.50198 10.0284 1.39578L9.0106 0.411194C8.4439 -0.137048 7.5561 -0.137081 6.98943 0.411194L5.97163 1.39588C5.86181 1.50211 5.71216 1.55067 5.56085 1.52937L4.15872 1.33103C3.37791 1.22053 2.6598 1.74246 2.52356 2.51907L2.27892 3.91384C2.2525 4.0643 2.15998 4.19167 2.02505 4.26329L0.774132 4.92702C0.0776414 5.29653 -0.196708 6.14091 0.149551 6.84929L0.771429 8.1215C0.838518 8.25878 0.838518 8.41621 0.771429 8.55345L0.149518 9.82567C-0.196741 10.534 0.0776087 11.3784 0.774099 11.7479L2.02502 12.4116C2.15998 12.4832 2.2525 12.6106 2.27892 12.7611L2.52356 14.1559C2.64758 14.8629 3.2538 15.3587 3.95051 15.3586C4.01913 15.3586 4.08876 15.3538 4.15875 15.3439L5.56088 15.1456C5.71209 15.1241 5.86184 15.1728 5.97166 15.279L6.98943 16.2636C7.27283 16.5378 7.63635 16.6748 8 16.6748C8.36355 16.6748 8.7273 16.5377 9.01057 16.2636L10.0284 15.279C10.1382 15.1728 10.2879 15.1243 10.4391 15.1456L11.8413 15.3439C12.6222 15.4544 13.3402 14.9325 13.4764 14.1559L13.7211 12.7611C13.7475 12.6106 13.8401 12.4832 13.975 12.4116L15.2259 11.7479C15.9224 11.3784 16.1967 10.534 15.8505 9.82564L15.2286 8.55338ZM6.07653 4.00965C7.04873 4.00965 7.8397 4.80062 7.8397 5.77283C7.8397 6.74504 7.04873 7.53601 6.07653 7.53601C5.10432 7.53601 4.31335 6.74504 4.31335 5.77283C4.31335 4.80062 5.10432 4.00965 6.07653 4.00965ZM5.16646 11.8509C5.07256 11.9448 4.94949 11.9918 4.82645 11.9918C4.70341 11.9918 4.58031 11.9449 4.48645 11.8509C4.29866 11.6632 4.29866 11.3587 4.48645 11.1709L10.8335 4.82384C11.0213 4.63606 11.3258 4.63606 11.5136 4.82384C11.7013 5.01163 11.7013 5.3161 11.5136 5.50389L5.16646 11.8509ZM9.92341 12.6652C8.9512 12.6652 8.16023 11.8742 8.16023 10.902C8.16023 9.92982 8.9512 9.13885 9.92341 9.13885C10.8956 9.13885 11.6866 9.92982 11.6866 10.902C11.6866 11.8742 10.8956 12.6652 9.92341 12.6652Z" fill="white"/>
+                            <path d="M9.92255 10.1006C9.48064 10.1006 9.12109 10.4601 9.12109 10.902C9.12109 11.3439 9.48061 11.7034 9.92255 11.7034C10.3645 11.7034 10.724 11.3439 10.724 10.902C10.724 10.4601 10.3645 10.1006 9.92255 10.1006Z" fill="white"/>
+                            <path d="M6.07486 4.97168C5.63295 4.97168 5.27344 5.33119 5.27344 5.7731C5.27344 6.21501 5.63295 6.57456 6.07486 6.57456C6.51677 6.57456 6.87632 6.21505 6.87632 5.7731C6.87628 5.33123 6.51677 4.97168 6.07486 4.97168Z" fill="white"/>
+                            </svg>
+                        Offer
+                    </a>
+                    <a href="blog.html" class="nav-link hover:text-primary transition-all duration-300 flex items-center gap-2">
+                        <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M10.6337 10.7613L8.68832 11.4637C8.55592 11.5115 8.40861 11.4777 8.30945 11.3767C8.21029 11.2758 8.17704 11.1259 8.22404 10.9912L8.91416 9.01133C8.91817 9.00025 8.9239 8.99033 8.9325 8.98217L14.0791 3.74383C14.333 3.48542 14.7452 3.48542 14.9991 3.74383L15.8096 4.56867C16.0635 4.82708 16.0635 5.2465 15.8096 5.50492L10.6624 10.7427C10.6543 10.7514 10.6446 10.7572 10.6337 10.7613ZM12.61 10.4107V12.25C12.61 12.7143 12.4289 13.1594 12.1062 13.4872C11.7841 13.8157 11.3467 14 10.8905 14H1.71955C1.2633 14 0.825958 13.8157 0.503829 13.4872C0.181126 13.1594 0 12.7143 0 12.25V4.08333H12.1246L8.12144 8.15733C7.99305 8.288 7.89446 8.44667 7.8337 8.62167L7.14359 10.6009C6.94871 11.1597 7.08742 11.7822 7.49896 12.2016C7.91108 12.6204 8.52267 12.7616 9.07178 12.5632L11.0166 11.8609C11.1885 11.7991 12.61 10.4107 12.61 10.4107ZM2.86592 11.0833H4.68234C4.99874 11.0833 5.25552 10.822 5.25552 10.5C5.25552 10.178 4.99874 9.91667 4.68234 9.91667H2.86592C2.54952 9.91667 2.29274 10.178 2.29274 10.5C2.29274 10.822 2.54952 11.0833 2.86592 11.0833ZM2.86592 8.75H5.82871C6.1451 8.75 6.40189 8.48867 6.40189 8.16667C6.40189 7.84467 6.1451 7.58333 5.82871 7.58333H2.86592C2.54952 7.58333 2.29274 7.84467 2.29274 8.16667C2.29274 8.48867 2.54952 8.75 2.86592 8.75ZM2.86592 6.41667H8.12144C8.43784 6.41667 8.69463 6.15533 8.69463 5.83333C8.69463 5.51133 8.43784 5.25 8.12144 5.25H2.86592C2.54952 5.25 2.29274 5.51133 2.29274 5.83333C2.29274 6.15533 2.54952 6.41667 2.86592 6.41667ZM0 2.91667V1.75C0 1.28567 0.181126 0.840583 0.503829 0.51275C0.825958 0.184333 1.2633 0 1.71955 0H10.8905C11.3467 0 11.7841 0.184333 12.1062 0.51275C12.4289 0.840583 12.61 1.28567 12.61 1.75V2.91667H0Z" fill="white"/>
+                            </svg>                        
+                        Blog
+                    </a>
+                    <a href="contact.html" class="nav-link  hover:text-primary transition-all duration-300 flex items-center gap-2">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15.2244 11.8278L12.9014 10.2048C12.5976 9.99297 12.2425 9.88127 11.8743 9.88127C11.2889 9.88127 10.7393 10.1684 10.4045 10.6488L9.86528 11.4216C8.96151 10.8155 7.95304 9.96916 6.99166 9.00796C6.03046 8.04676 5.18429 7.03829 4.57833 6.13452L5.35079 5.59527C5.74455 5.32109 6.00753 4.91035 6.09104 4.43903C6.17438 3.96806 6.06933 3.49218 5.7948 3.09825L4.17214 0.775262C3.83284 0.289936 3.28535 0 2.70741 0C2.50712 0 2.31067 0.0353665 2.12369 0.104349C1.91131 0.182785 1.71347 0.27908 1.51948 0.400937L1.19873 0.626793C1.11854 0.689122 1.04396 0.757404 0.972523 0.828837C0.581215 1.21997 0.303535 1.7151 0.146837 2.30058C-0.521801 4.80705 1.13465 8.59722 4.26861 11.7312C6.90044 14.363 10.0622 15.9979 12.5199 15.9983C12.9408 15.9983 13.3377 15.9493 13.6994 15.8526C14.2849 15.6961 14.78 15.4184 15.1715 15.0269C15.2426 14.9558 15.3105 14.8813 15.3833 14.7871L15.6094 14.4646C15.7198 14.2881 15.816 14.0902 15.8954 13.8763C16.1688 13.1374 15.8928 12.2949 15.2244 11.8278Z" fill="white"/>
+                            </svg>
+                            Contact
+                    </a>
+                </nav>
+                <div class="flex items-center lg:gap-8 gap-4">
+                    <div class="relative">
+                        <a href="cart.html">
+                            <i class="fas fa-shopping-cart me-1"></i> Cart
+                            <span class="cart-badge">3</span>
+                        </a>
+                    </div>
+                    <a href="menu-list.html"
+                        class="btn-primary !leading-[1] !hidden md:!flex">
+                            Order Now
+                    </a>
+                    <div class="md:hidden">
+                        <button id="mobile-menu-button"
+                            class=" focus:outline-none w-[20px]">
+                            <i class="fas fa-bars text-xl"></i>
+                        </button>
+                    </div>
+                </div>
+             </div>
+
+            <!-- Mobile Navigation Menu -->
+            <div id="mobile-menu" class="mobile-menu md:hidden">
+                <div class="bg-white rounded-lg shadow-lg p-4 space-y-3 flex flex-col border border-gray-100">
+                    <a href="index.html#menu" class="nav-link font-medium text-accent hover:text-primary transition-all duration-300 inline-flex items-center gap-2 w-fit text-sm">
+                        <i class="fas fa-utensils"></i> Menu
+                    </a>
+                    <a href="index.html#offer" class="nav-link font-medium text-accent hover:text-primary transition-all duration-300 inline-flex items-center gap-2 w-fit text-sm">
+                        <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15.2286 8.55338C15.1615 8.41611 15.1615 8.25868 15.2286 8.12144L15.8505 6.84919C16.1967 6.14081 15.9224 5.29649 15.2259 4.92695L13.975 4.26322C13.84 4.19164 13.7475 4.06424 13.7211 3.91381L13.4764 2.51897C13.3402 1.74236 12.6218 1.2205 11.8413 1.33094L10.4391 1.52927C10.2878 1.55064 10.1382 1.50198 10.0284 1.39578L9.0106 0.411194C8.4439 -0.137048 7.5561 -0.137081 6.98943 0.411194L5.97163 1.39588C5.86181 1.50211 5.71216 1.55067 5.56085 1.52937L4.15872 1.33103C3.37791 1.22053 2.6598 1.74246 2.52356 2.51907L2.27892 3.91384C2.2525 4.0643 2.15998 4.19167 2.02505 4.26329L0.774132 4.92702C0.0776414 5.29653 -0.196708 6.14091 0.149551 6.84929L0.771429 8.1215C0.838518 8.25878 0.838518 8.41621 0.771429 8.55345L0.149518 9.82567C-0.196741 10.534 0.0776087 11.3784 0.774099 11.7479L2.02502 12.4116C2.15998 12.4832 2.2525 12.6106 2.27892 12.7611L2.52356 14.1559C2.64758 14.8629 3.2538 15.3587 3.95051 15.3586C4.01913 15.3586 4.08876 15.3538 4.15875 15.3439L5.56088 15.1456C5.71209 15.1241 5.86184 15.1728 5.97166 15.279L6.98943 16.2636C7.27283 16.5378 7.63635 16.6748 8 16.6748C8.36355 16.6748 8.7273 16.5377 9.01057 16.2636L10.0284 15.279C10.1382 15.1728 10.2879 15.1243 10.4391 15.1456L11.8413 15.3439C12.6222 15.4544 13.3402 14.9325 13.4764 14.1559L13.7211 12.7611C13.7475 12.6106 13.8401 12.4832 13.975 12.4116L15.2259 11.7479C15.9224 11.3784 16.1967 10.534 15.8505 9.82564L15.2286 8.55338ZM6.07653 4.00965C7.04873 4.00965 7.8397 4.80062 7.8397 5.77283C7.8397 6.74504 7.04873 7.53601 6.07653 7.53601C5.10432 7.53601 4.31335 6.74504 4.31335 5.77283C4.31335 4.80062 5.10432 4.00965 6.07653 4.00965ZM5.16646 11.8509C5.07256 11.9448 4.94949 11.9918 4.82645 11.9918C4.70341 11.9918 4.58031 11.9449 4.48645 11.8509C4.29866 11.6632 4.29866 11.3587 4.48645 11.1709L10.8335 4.82384C11.0213 4.63606 11.3258 4.63606 11.5136 4.82384C11.7013 5.01163 11.7013 5.3161 11.5136 5.50389L5.16646 11.8509ZM9.92341 12.6652C8.9512 12.6652 8.16023 11.8742 8.16023 10.902C8.16023 9.92982 8.9512 9.13885 9.92341 9.13885C10.8956 9.13885 11.6866 9.92982 11.6866 10.902C11.6866 11.8742 10.8956 12.6652 9.92341 12.6652Z" fill="white"/>
+                            <path d="M9.92255 10.1006C9.48064 10.1006 9.12109 10.4601 9.12109 10.902C9.12109 11.3439 9.48061 11.7034 9.92255 11.7034C10.3645 11.7034 10.724 11.3439 10.724 10.902C10.724 10.4601 10.3645 10.1006 9.92255 10.1006Z" fill="black"/>
+                            <path d="M6.07486 4.97168C5.63295 4.97168 5.27344 5.33119 5.27344 5.7731C5.27344 6.21501 5.63295 6.57456 6.07486 6.57456C6.51677 6.57456 6.87632 6.21505 6.87632 5.7731C6.87628 5.33123 6.51677 4.97168 6.07486 4.97168Z" fill="black"/>
+                            </svg>
+                        Offer
+                    </a>
+                    <a href="blog.html" class="nav-link font-medium text-accent hover:text-primary transition-all duration-300 inline-flex items-center gap-2 w-fit text-sm">
+                        <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M10.6337 10.7613L8.68832 11.4637C8.55592 11.5115 8.40861 11.4777 8.30945 11.3767C8.21029 11.2758 8.17704 11.1259 8.22404 10.9912L8.91416 9.01133C8.91817 9.00025 8.9239 8.99033 8.9325 8.98217L14.0791 3.74383C14.333 3.48542 14.7452 3.48542 14.9991 3.74383L15.8096 4.56867C16.0635 4.82708 16.0635 5.2465 15.8096 5.50492L10.6624 10.7427C10.6543 10.7514 10.6446 10.7572 10.6337 10.7613ZM12.61 10.4107V12.25C12.61 12.7143 12.4289 13.1594 12.1062 13.4872C11.7841 13.8157 11.3467 14 10.8905 14H1.71955C1.2633 14 0.825958 13.8157 0.503829 13.4872C0.181126 13.1594 0 12.7143 0 12.25V4.08333H12.1246L8.12144 8.15733C7.99305 8.288 7.89446 8.44667 7.8337 8.62167L7.14359 10.6009C6.94871 11.1597 7.08742 11.7822 7.49896 12.2016C7.91108 12.6204 8.52267 12.7616 9.07178 12.5632L11.0166 11.8609C11.1885 11.7991 12.61 10.4107 12.61 10.4107ZM2.86592 11.0833H4.68234C4.99874 11.0833 5.25552 10.822 5.25552 10.5C5.25552 10.178 4.99874 9.91667 4.68234 9.91667H2.86592C2.54952 9.91667 2.29274 10.178 2.29274 10.5C2.29274 10.822 2.54952 11.0833 2.86592 11.0833ZM2.86592 8.75H5.82871C6.1451 8.75 6.40189 8.48867 6.40189 8.16667C6.40189 7.84467 6.1451 7.58333 5.82871 7.58333H2.86592C2.54952 7.58333 2.29274 7.84467 2.29274 8.16667C2.29274 8.48867 2.54952 8.75 2.86592 8.75ZM2.86592 6.41667H8.12144C8.43784 6.41667 8.69463 6.15533 8.69463 5.83333C8.69463 5.51133 8.43784 5.25 8.12144 5.25H2.86592C2.54952 5.25 2.29274 5.51133 2.29274 5.83333C2.29274 6.15533 2.54952 6.41667 2.86592 6.41667ZM0 2.91667V1.75C0 1.28567 0.181126 0.840583 0.503829 0.51275C0.825958 0.184333 1.2633 0 1.71955 0H10.8905C11.3467 0 11.7841 0.184333 12.1062 0.51275C12.4289 0.840583 12.61 1.28567 12.61 1.75V2.91667H0Z" fill="black"/>
+                            </svg>                        
+                        Blog
+                    </a>
+                    <a href="contact.html" class="nav-link text-accent font-medium hover:text-primary transition-all duration-300 inline-flex items-center gap-2 w-fit text-sm">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15.2244 11.8278L12.9014 10.2048C12.5976 9.99297 12.2425 9.88127 11.8743 9.88127C11.2889 9.88127 10.7393 10.1684 10.4045 10.6488L9.86528 11.4216C8.96151 10.8155 7.95304 9.96916 6.99166 9.00796C6.03046 8.04676 5.18429 7.03829 4.57833 6.13452L5.35079 5.59527C5.74455 5.32109 6.00753 4.91035 6.09104 4.43903C6.17438 3.96806 6.06933 3.49218 5.7948 3.09825L4.17214 0.775262C3.83284 0.289936 3.28535 0 2.70741 0C2.50712 0 2.31067 0.0353665 2.12369 0.104349C1.91131 0.182785 1.71347 0.27908 1.51948 0.400937L1.19873 0.626793C1.11854 0.689122 1.04396 0.757404 0.972523 0.828837C0.581215 1.21997 0.303535 1.7151 0.146837 2.30058C-0.521801 4.80705 1.13465 8.59722 4.26861 11.7312C6.90044 14.363 10.0622 15.9979 12.5199 15.9983C12.9408 15.9983 13.3377 15.9493 13.6994 15.8526C14.2849 15.6961 14.78 15.4184 15.1715 15.0269C15.2426 14.9558 15.3105 14.8813 15.3833 14.7871L15.6094 14.4646C15.7198 14.2881 15.816 14.0902 15.8954 13.8763C16.1688 13.1374 15.8928 12.2949 15.2244 11.8278Z" fill="black"/>
+                            </svg>
+                            Contact
+                    </a>
+                    <a href="checkout.html"
+                    class="btn-primary !leading-[1] w-fit"> Order Now
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section relative">
+      <div class="absolute inset-0 bg-accent/80"></div>
+    <div class="absolute inset-0 w-full h-full z-[-1]">
+        <img src="assets/images/banner-img.png" alt="Hero-background-image" loading="lazy" class="w-full h-full object-cover">
+    </div>
+      <div class="container mx-auto px-4 h-full flex items-center justify-center xl:py-28 md:py-24 pt-10 sm:pb-12 pb-10">
+          <div class="text-center relative z-10 max-w-4xl">
+                <h2 class="title-font md:text-6xl sm:text-5xl text-[33px] xl:text-8xl text-white sm:mb-6 mb-4 animate-fade-in !leading-[1]">
+                    Flavors You'll Love
+                </h2>
+                <p class="text-sm md:text-xl text-white md:mb-8 sm:mb-6 mb-4 animate-fade-in-delay relative z-10">
+                    Where culinary artistry meets unforgettable flavors
+                </p>
+
+                <div class="flex flex-wrap justify-center gap-6 animate-fade-in-delay">
+                  <a href="#menu"
+                      class="btn-primary">
+                      <i class="fas fa-book-open"></i> Explore Menu
+                  </a>
+              </div>
+          </div>
+      </div>
+      <div class="md:mx-6 mx-4">
+        <div class="hero-slider swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="hero-card relative pt-[120%] rounded-tl-[145px] rounded-tr-[145px] overflow-hidden">
+                        <img src="assets/images/hero-image1.png" alt="hero-image" loading="lazy" class="absolute inset-0 w-full h-full object-cover">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="hero-card relative pt-[120%] rounded-tl-[145px] rounded-tr-[145px] overflow-hidden">
+                        <img src="assets/images/hero-image2.png" alt="hero-image" loading="lazy" class="absolute inset-0 w-full h-full object-cover">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="hero-card relative pt-[120%] rounded-tl-[145px] rounded-tr-[145px] overflow-hidden">
+                        <img src="assets/images/hero-image3.png" alt="hero-image" loading="lazy" class="absolute inset-0 w-full h-full object-cover">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="hero-card relative pt-[120%] rounded-tl-[145px] rounded-tr-[145px] overflow-hidden">
+                        <img src="assets/images/hero-image4.png" alt="hero-image" loading="lazy" class="absolute inset-0 w-full h-full object-cover">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="hero-card relative pt-[120%] rounded-tl-[145px] rounded-tr-[145px] overflow-hidden">
+                        <img src="assets/images/hero-image5.png" alt="hero-image" loading="lazy" class="absolute inset-0 w-full h-full object-cover">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="hero-card relative pt-[120%] rounded-tl-[145px] rounded-tr-[145px] overflow-hidden">
+                        <img src="assets/images/hero-image6.png" alt="hero-image" loading="lazy" class="absolute inset-0 w-full h-full object-cover">
+                    </div>
+                </div><div class="swiper-slide">
+                    <div class="hero-card relative pt-[120%] rounded-tl-[145px] rounded-tr-[145px] overflow-hidden">
+                        <img src="assets/images/hero-image7.png" alt="hero-image" loading="lazy" class="absolute inset-0 w-full h-full object-cover">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="hero-card relative pt-[120%] rounded-tl-[145px] rounded-tr-[145px] overflow-hidden">
+                        <img src="assets/images/hero-image8.png" alt="hero-image" loading="lazy" class="absolute inset-0 w-full h-full object-cover">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="hero-card relative pt-[120%] rounded-tl-[145px] rounded-tr-[145px] overflow-hidden">
+                        <img src="assets/images/hero-image9.png" alt="hero-image" loading="lazy" class="absolute inset-0 w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+  </section>
+
+  <!-- Popular Dishes Section -->
+    <section id="menu" class="lg:py-16 py-10 bg-accent">
+        <div class="md:container w-full mx-auto px-4">
+            <div class="text-center mb-6 lg:mb-8">
+                <h2 class="lg:text-5xl sm:text-4xl text-2xl">Popular Dishes</h2>
+            </div>
+            <div class="tabs-container flex flex-wrap justify-center sm:gap-4 gap-x-2 gap-y-4 items-center relative overflow-x-auto xl:mb-12 sm:mb-8 mb-3">
+                <div class="tab-indicator"></div>
+                <button
+                    class="category-tab active relative font-medium outline-none pb-1 text-sm md:text-base flex items-center transition-all duration-200 rounded-lg"
+                    data-category="all">
+                    <i class="fas fa-utensils me-2"></i>
+                    <span class="whitespace-nowrap">All Items</span>
+                </button>
+                <i class="fa-solid fa-star-of-life text-primary sm:text-[10px] text-[7px]"></i>
+                <button
+                    class="category-tab relative font-medium outline-none pb-1 text-sm md:text-base flex items-center transition-all duration-200 rounded-lg"
+                    data-category="main">
+                    <i class="fas fa-concierge-bell me-2"></i>
+                    <span class="whitespace-nowrap">Main Course</span>
+                </button>
+                <i class="fa-solid fa-star-of-life text-primary sm:text-[10px] text-[7px]"></i>
+                <button
+                    class="category-tab relative font-medium outline-none pb-1 text-sm md:text-base flex items-center transition-all duration-200 rounded-lg"
+                    data-category="dessert">
+                    <i class="fas fa-ice-cream me-2"></i>
+                    <span class="whitespace-nowrap">Desserts</span>
+                </button>
+                <i class="fa-solid fa-star-of-life text-primary sm:text-[10px] text-[7px]"></i>
+                <button
+                    class="category-tab relative font-medium outline-none pb-1 text-sm md:text-base flex items-center transition-all duration-200 rounded-lg"
+                    data-category="drinks">
+                    <i class="fas fa-glass-whiskey me-2"></i>
+                    <span class="whitespace-nowrap">Drinks</span>
+                </button>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:gap-8 gap-6">
+            <div class="menu-card flex flex-col h-full overflow-hidden xl:pt-16 md:pt-12 pt-8 xl:px-14 md:px-8 px-4 xl:pb-10 md:pb-6 pb-4 border border-primary rounded-tl-full rounded-tr-full text-center"
+                data-category="main">
+                <div class="menu-label uppercase text-primary md:mb-6 mb-4 md:text-base text-sm">Main
+                Course</div>
+                <div class="relative xl:w-[250px] xl:h-[250px] w-[180px] h-[180px] mx-auto md:mb-6 mb-4 rounded-full overflow-hidden">
+                    <img src="assets/images/product-02.png" alt="Gourmet Salad"
+                        class="menu-img w-full h-full object-cover">
+                </div>
+                <div class="flex flex-col flex-1">
+                    <h3 class="menu-title md:text-xl text-lg md:mb-4 mb-2"><a href="menu-list.html">Grilled Ribeye Steak</a></h3>
+                    <p class="menu-description mb-4 md:mb-6 flex-1">Premium 12oz ribeye steak grilled
+                    to perfection perfection vperfection, served with roasted garlic mashed potatoes and
+                    seasonal vegetables. The perfect choice for meat lovers looking for a high-quality dining
+                    experience.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-lg text-primary">$29.99</span>
+                        <button
+                            class="add-to-cart-btn btn-primary px-5 py-2 text-sm">
+                            <i class="fas fa-plus text-xs"></i>
+                            Add
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-card flex flex-col h-full overflow-hidden xl:pt-16 md:pt-12 pt-8 xl:px-14 md:px-8 px-4 xl:pb-10 md:pb-6 pb-4 border border-primary rounded-tl-full rounded-tr-full text-center"
+                data-category="dessert">
+                <div class="menu-label uppercase text-primary md:mb-6 mb-4 md:text-base text-sm">Dessert</div>
+                <div class="relative xl:w-[250px] xl:h-[250px] w-[180px] h-[180px] mx-auto overflow-hidden md:mb-6 mb-4 rounded-full rounded-full overflow-hidden">
+                    <img src="assets/images/product-04.png" alt="Dessert"
+                        class="menu-img w-full h-full object-cover">
+                </div>
+                <div class="flex flex-col flex-1">
+                    <h3 class="menu-title md:text-xl text-lg md:mb-4 mb-2"><a href="menu-list.html">Chocolate Lava Cake</a></h3>
+                    <p class="menu-description mb-4 md:mb-6 flex-1">Warm chocolate cake with a molten
+                        center, served with vanilla bean ice cream and fresh berries. Warm chocolate cake with a
+                        molten center, served with vanilla bean ice cream and fresh berries.</p>
+                    <div class="flex justify-between items-center">
+                            <span class="text-lg text-primary">$9.9</span>
+                            <button
+                                class="add-to-cart-btn btn-primary px-5 py-2 text-sm">
+                                <i class="fas fa-plus text-xs"></i>
+                                Add
+                            </button>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-card flex flex-col h-full overflow-hidden xl:pt-16 md:pt-12 pt-8 xl:px-14 md:px-8 px-4 xl:pb-10 md:pb-6 pb-4 border border-primary rounded-tl-full rounded-tr-full text-center"
+                data-category="drinks">
+                <div class="menu-label uppercase text-primary md:mb-6 mb-4 md:text-base text-sm">Drink</div>
+                <div class="relative xl:w-[250px] xl:h-[250px] w-[180px] h-[180px] mx-auto overflow-hidden md:mb-6 mb-4 rounded-full rounded-full overflow-hidden">
+                    <img src="assets/images/product-05.png" alt="Drink"
+                        class="menu-img w-full h-full object-cover">
+                </div>
+                <div class="flex flex-col flex-1">
+                    <h3 class="menu-title md:text-xl text-lg md:mb-4 mb-2"><a href="menu-list.html">Signature Berry Smoothie</a></h3>
+                    <p class="menu-description mb-4 md:mb-6 flex-1">A refreshing blend of mixed
+                        berries, Greek yogurt, honey, and almond milk. A refreshing blend of mixed berries, Greek
+                        yogurt, honey, and almond milk.</p>
+                    <div class="flex justify-between items-center">
+                            <span class="text-lg text-primary">$7.50</span>
+                            <button
+                                class="add-to-cart-btn btn-primary px-5 py-2 text-sm">
+                                <i class="fas fa-plus text-xs"></i>
+                                Add
+                            </button>
+                    </div>
+                </div>
+            </div>
+            </div>
+            </div>
+            <div class="text-center md:mt-8 mt-8">
+                <a href="menu-list.html"
+                    class="btn-primary">
+                    View Full Menu
+                </a>
+            </div>
+    </section>
+    <section class="relative bg-secondary text-primary lg:py-16 py-10">
+        <div class="md:container mx-auto px-4 w-full">
+        <!-- Left: Philosophy -->
+        <div class="flex flex-col lg:flex-row items-center justify-between gap-5 relative z-10">       
+        <div class="w-full lg:w-5/12 flex flex-col items-center  text-center">
+            <div class="mb-2 sm:text-lg text-sm italic font-serif">About Restaurant</div>
+            <h2 class="sm:text-3xl text-2xl xl:text-5xl text-white mb-4">WHAT WE VALUE</h2>
+            <div class="w-48 h-1 bg-[#e6b15f] mx-auto lg:mx-0 mb-6 relative">
+            <span class="absolute left-1/2 -translate-x-1/2 top-[-10px] w-6 h-6 border-2 border-primary bg-dark rounded-full flex items-center justify-center"><span class="w-2 h-2 bg-[#e6b15f] rounded-full"></span></span>
+            </div>
+            <p class="italic md:text-lg text-md md:mb-6 mb-3 text-primary">A place where food, design, and ambiance come together to create a memorable experience.</p>
+            <p class="text-white mb-2">Experience Ray's incomparable outdoor riverside dining at Ray's On The River, along with scenic patio dining at both Rays On The River and Rays.</p>
+            <p class="text-white">While social distancing is one of our top priorities, guests may still enjoy beautiful surrounding nature landscapes while dining.</p>
+            <div class="md:mt-6 mt-4">
+            <div class="uppercase tracking-widest text-white text-sm font-bold">Johnathan – Chef Master</div>
+            </div>
+        </div>
+        <div class="w-full lg:w-2/5 flex justify-center relative z-20">
+            <div class="relative lg:w-[340px] lg:h-[500px] xl:w-[380px] xl:h-[560px] w-full sm:h-[380px] h-[250px] lg:rounded-full rounded-3xl overflow-hidden shadow-2xl border-8 border-black outline outline-primary/50">
+                <img src="assets/images/about.png" alt="Restaurant Interior" class="w-full h-full object-cover object-center" />
+            </div>
+        </div>
+        <div class="w-full lg:w-5/12 flex flex-col items-center text-center">
+            <div class="mb-2 sm:text-lg text-sm italic font-serif">Time of Luxury</div>
+            <h2 class="sm:text-3xl text-2xl xl:text-5xl text-white mb-4">OPEN HOUR TIME</h2>
+            <div class="w-48 h-1 bg-[#e6b15f] mx-auto lg:mx-0 mb-6 relative">
+            <span class="absolute left-1/2 -translate-x-1/2 top-[-10px] w-6 h-6 border-2 border-primary bg-dark rounded-full flex items-center justify-center"><span class="w-2 h-2 bg-[#e6b15f] rounded-full"></span></span>
+            </div>
+            <p class="italic md:text-lg text-md md:mb-6 mb-3 text-primary">Come and experience the classy atmosphere with delicious food and music at brochette</p>
+            <div class="text-white mb-4">
+            <div class="font-semibold mb-2">OPENING HOUR:</div>
+            <ul class="space-y-1">
+                <li><span class="d-inline me-2">Monday – Friday :</span>9.00am – 22.00pm</li>
+                <li><span class="d-inline me-2">Saturday :</span>10.00am – 23.00pm</li>
+                <li><span class="d-inline me-2">Sunday :</span> 5.00pm – 23.00pm</li>
+                <li class="font-semibold"><span class="d-inline me-2">Happy Hour:</span> 18.00pm – 20.00pm</li>
+            </ul>
+            </div>
+            <div class="text-white text-sm italic">" On holidays is a special day, we will open and with special offer "</div>
+        </div>
+        </div>
+    </div>
+    </section>
+    <section class="lg:py-16 py-10 relative z-[1]" id="offer">
+    <div
+        class="bg-animation-1 absolute start-0 md:top-[-70px] top-[-30px] md:w-[140px] md:h-[140px] w-[80px] h-[80px] animate-bounce !duration-[3s] ease-linear transition-all !delay-[4s] z-[-1]">
+        <img src="assets/images/bg-animation-1.png" alt="animation-image"
+            loading="lazy" class="w-full h-full">
+    </div>
+    <div class="background-image absolute inset-0 w-full h-full z-[-2]">
+        <img src="assets/images/bg-img.png" alt="background-image"
+            loading="lazy" class="w-full h-full object-cover">
+    </div>
+    <div class="container mx-auto px-4 relative z-10">
+        <div class="text-center mb-6 lg:mb-8">
+            <h2 class="lg:text-5xl sm:text-4xl text-2xl">Special Offers</h2>
+            <p class="mt-4 text-white max-w-2xl mx-auto md:text-[16px] text-sm">
+                Take advantage of our limited-time deals and seasonal
+                promotions.
+            </p>
+        </div>
+        <div
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:gap-8 gap-4">
+            <div
+                class="bg-accent rounded-2xl overflow-hidden transition-all relative z-[1] flex flex-col">
+                <div class="offer-bg absolute inset-0 z-[-1]">
+                    <img src="assets/images/offer-bg1.png" alt="offer image"
+                        loading="lazy"
+                        class="w-full h-full object-cover object-top">
+                </div>
+                <div
+                    class="bg-primary text-black py-3 text-center font-semibold">
+                    LIMITED TIME OFFER
+                </div>
+                <div
+                    class="xl:p-6 p-4 bg-accent/70 m-4 rounded-2xl border border-primary h-full">
+                    <h3 class="text-xl text-dark mb-4">Family Feast Deal</h3>
+                    <p class="text-white md:mb-6 mb-4">Get our family meal
+                        bundle with 2 main courses, 4 sides, and a
+                        dessert to share.</p>
+                    <div
+                        class="flex justify-between items-center flex-wrap gap-2">
+                        <div class="flex items-center gap-2 flex-wrap">
+                            <span class="line-through text-white">$89.99</span>
+                            <span
+                                class="text-primary font-bold md:text-xl text-lg">$69.99</span>
+                        </div>
+                        <a href="menu-list.html"
+                            class="btn-primary">Order
+                            Now</a>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="bg-accent rounded-2xl overflow-hidden transition-all relative z-[1] flex flex-col">
+                <div class="offer-bg absolute inset-0 z-[-1]">
+                    <img src="assets/images/offer-bg2.png" alt="offer image"
+                        loading="lazy"
+                        class="w-full h-full object-cover object-top">
+                </div>
+                <div
+                    class="bg-primary text-black py-3 text-center font-semibold">
+                    WEEKDAY SPECIAL
+                </div>
+                <div
+                    class="xl:p-6 p-4 bg-accent/70 m-4 rounded-2xl border border-primary h-full">
+                    <h3 class="text-xl text-dark mb-4">Lunch Hour Express</h3>
+                    <p class="text-white md:mb-6 mb-4">Enjoy any main course, a
+                        side, and a drink between 11am and 2pm,
+                        Monday to Friday.</p>
+                    <div
+                        class="flex justify-between items-center flex-wrap gap-2">
+                        <div class="flex items-center gap-2 flex-wrap">
+                            <span class="line-through text-white">$24.99</span>
+                            <span
+                                class="text-primary font-bold md:text-xl text-lg">$17.99</span>
+                        </div>
+                        <a href="menu-list.html"
+                            class="btn-primary">Order
+                            Now</a>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="bg-accent rounded-2xl overflow-hidden transition-all relative z-[1] flex flex-col">
+                <div class="offer-bg absolute inset-0 z-[-1]">
+                    <img src="assets/images/offer-bg3.png" alt="offer image"
+                        loading="lazy"
+                        class="w-full h-full object-cover object-top">
+                </div>
+                <div
+                    class="bg-primary text-black py-3 text-center font-semibold">
+                    SUBSCRIBER SPECIAL
+                </div>
+                <div
+                    class="xl:p-6 p-4 bg-accent/70 m-4 rounded-2xl border border-primary h-full">
+                    <h3 class="text-xl text-dark mb-4">10% Off First Order</h3>
+                    <p class="text-white md:mb-6 mb-4">Subscribe to our
+                        newsletter and receive 10% off your first online
+                        order with us.</p>
+                    <div
+                        class="flex justify-between items-center flex-wrap gap-2">
+                        <div class="flex items-center gap-2 flex-wrap">
+                            <span
+                                class="text-primary font-bold md:text-xl text-lg">10%
+                                OFF</span>
+                        </div>
+                        <a href="menu-list.html"
+                            class="btn-primary">Order
+                            Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+    <section class="py-10 lg:py-16 relative z-[1]" id="reservation">
+        <div class="reservation-bg absolute inset-0 w-full h-full z-[-1]">
+            <video class="w-full h-full object-cover" autoplay muted loop>
+                <source src="assets/images/bg-video.mp4"
+                    class="w-full h-full block">
+            </video>
+        </div>
+        <div class="absolute inset-0 bg-black/60 z-[-1]"></div>
+        <div class="md:container w-full mx-auto px-4">
+            <div class="text-center mb-6 lg:mb-8">
+                <h2 class="lg:text-5xl sm:text-4xl text-2xl">Reserve Your Table</h2>
+                <p class="mt-4 text-white max-w-lg mx-auto md:text-[16px] text-sm">
+                    Book your dining experience in advance. Let us know if you have
+                    any special requests!
+                </p>
+            </div>
+            <div class="max-w-5xl mx-auto">
+                <div
+                    class="grid grid-cols-1 lg:grid-cols-3 lg:space-y-0 space-y-4">
+                    <div
+                        class="md:p-6 p-4 lg:col-span-2 border border-white/60 lg:border-e-0 !rounded-tl-2xl rtl:lg:!rounded-tl-none rtl:lg:!rounded-bl-none rtl:rounded-tr-2xl rtl:rounded-br-2xl !rounded-bl-2xl lg:rounded-none rounded-2xl bg-accent">
+                        <form id="reservationForm">
+                            <div
+                                class="grid grid-cols-1 sm:grid-cols-2 sm:gap-6 gap-4 sm:mb-6 mb-4">
+                                <div class="floating-label">
+                                    <input type="text" id="fullName"
+                                        placeholder="Your Name"
+                                        class="w-full px-4 py-3 border text-sm border-white/60 rounded-full focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20">
+                                </div>
+                                <div class="floating-label">
+                                    <input type="number" id="phone"
+                                        placeholder="Phone Number"
+                                        class="w-full px-4 py-3 border text-sm border-white/60 rounded-full focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20">
+                                </div>
+                            </div>
+
+                            <div
+                                class="grid grid-cols-1 sm:grid-cols-2 sm:gap-6 gap-4 sm:mb-6 mb-4">
+                                <div class="floating-label">
+                                    <div class="relative inline-block w-full">
+                                            <input type="text" id="datepicker-input" placeholder="Select date" readonly class="w-full cursor-pointer px-4 py-3 border text-sm border-white/60 rounded-full focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20" />
+                                            <div id="datepicker-calendar" class="absolute mt-1 p-4 border rounded-lg bg-white text-black shadow hidden z-10 w-64"></div>
+                                            <svg class="absolute right-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-white pointer-events-none"
+                                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M8 7V3M16 7V3M3 11h18M5 21h14a2 2 0 002-2V7H3v12a2 2 0 002 2z" />
+                                        </svg>
+                                        </div>
+                                    </div>
+                                <div class="floating-label">
+                                    <select id="time"
+                                        class="w-full px-4 !py-3 border text-sm h-full border-white/60 rounded-full focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20">
+                                        <option value>Select time</option>
+                                        <option value="11:00">11:00 AM</option>
+                                        <option value="11:30">11:30 AM</option>
+                                        <option value="12:00">12:00 PM</option>
+                                        <option value="12:30">12:30 PM</option>
+                                        <option value="13:00">1:00 PM</option>
+                                        <option value="13:30">1:30 PM</option>
+                                        <option value="17:00">5:00 PM</option>
+                                        <option value="17:30">5:30 PM</option>
+                                        <option value="18:00">6:00 PM</option>
+                                        <option value="18:30">6:30 PM</option>
+                                        <option value="19:00">7:00 PM</option>
+                                        <option value="19:30">7:30 PM</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div
+                                class="grid grid-cols-1 sm:grid-cols-2 sm:gap-6 gap-4 sm:mb-6 mb-4">
+                                <div>
+                                    <div class="relative">
+                                        <select id="guests"
+                                            class="w-full px-4 !py-3 border text-sm border-white/60 rounded-full appearance-none focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 ">
+                                            <option value="1">1 person</option>
+                                            <option value="2">2 people</option>
+                                            <option value="3">3 people</option>
+                                            <option value="4">4 people</option>
+                                            <option value="5">5 people</option>
+                                            <option value="6">6 people</option>
+                                            <option value="7">7 people</option>
+                                            <option value="8">8 people</option>
+                                            <option value="9+">9+
+                                                people</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="relative">
+                                        <select id="occasion"
+                                            class="w-full px-4 !py-3 border text-sm border-white/60 rounded-full appearance-none focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 ">
+                                            <option value>Select
+                                                occasion</option>
+                                            <option>Birthday</option>
+                                            <option>Anniversary</option>
+                                            <option>Date Night</option>
+                                            <option>Business Meal</option>
+                                            <option>Special Celebration</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Special Requests -->
+                            <div class="sm:mb-6 mb-4">
+                                <div class="floating-label">
+                                    <textarea id="specialRequests" rows="3"
+                                        placeholder="Special Requests"
+                                        class="w-full px-4 py-3 border text-sm border-white/60 rounded-2xl focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20"></textarea>
+                                </div>
+                            </div>
+
+                            <!-- Submit Button -->
+                            <button type="submit" id="submitBtn"
+                                class="btn-primary w-full">
+                                <span class="flex items-center justify-center">
+                                    <i class="fas fa-calendar-check me-2"></i>
+                                    Confirm Reservation
+                                </span>
+                            </button>
+                        </form>
+                    </div>
+                    <div
+                        class="bg-primary text-black p-4 md:p-6 !rounded-tr-2xl !rounded-br-2xl rtl:lg:!rounded-tr-none rtl:lg:!rounded-br-none rtl:lg:!rounded-tl-2xl rtl:lg:!rounded-bl-2xl lg:rounded-none rounded-2xl">
+                        <div class="h-full flex flex-col">
+                            <div class="sm:mb-6 mb-4">
+                                <h3
+                                    class="md:text-2xl text-lg font-bold mb-6 flex items-center">
+                                    <i class="fas fa-info-circle me-3"></i>
+                                    Reservation Details
+                                </h3>
+
+                                <div class="md:space-y-6 space-y-4">
+                                    <div>
+                                        <h4
+                                            class="font-semibold text-lg mb-3 flex items-center">
+                                            <i class="fas fa-clock me-2"></i>
+                                            Opening Hours
+                                        </h4>
+                                        <ul class="space-y-2">
+                                            <li
+                                                class="flex justify-between items-center py-1 border-b border-black/10">
+                                                <span>Monday - Saturday</span>
+                                                <span class="font-medium">11AM -
+                                                    10PM</span>
+                                            </li>
+                                            <li
+                                                class="flex justify-between items-center py-1">
+                                                <span>Sunday</span>
+                                                <span class="font-medium">10AM -
+                                                    9PM</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <h4
+                                            class="font-semibold text-lg mb-3 flex items-center">
+                                            <i class="fas fa-phone me-2"></i>
+                                            Contact Us
+                                        </h4>
+                                        <div class="space-y-3">
+                                            <div class="flex items-center">
+                                                <i
+                                                    class="fas fa-phone me-3 w-5 text-center"></i>
+                                                <span>
+                                                    <a href="tel:(123) 456-7890">(123) 456-7890</a></span>
+                                            </div>
+                                            <div class="flex items-center">
+                                                <i
+                                                    class="fas fa-envelope me-3 w-5 text-center"></i>
+                                                <span>
+                                                    <a href="mailto:">reservations@example.com</a></span>
+                                            </div>
+                                            <div class="flex items-center">
+                                                <i
+                                                    class="fas fa-map-marker-alt me-3 w-5 text-center"></i>
+                                                <span>123 Restaurant St,
+                                                    Foodville</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Social Media -->
+                            <div class>
+                                <div class="flex md:gap-4 gap-2">
+                                    <a href="javascript:void(0)"
+                                        class="md:w-10 md:h-10 w-8 h-8 rounded-full border border-black flex items-center justify-center hover:bg-black hover:text-white transition">
+                                        <i class="fab fa-facebook-f"></i>
+                                    </a>
+                                    <a href="javascript:void(0)"
+                                        class="md:w-10 md:h-10 w-8 h-8 rounded-full border border-black flex items-center justify-center hover:bg-black hover:text-white transition">
+                                        <i class="fab fa-instagram"></i>
+                                    </a>
+                                    <a href="javascript:void(0)"
+                                        class="md:w-10 md:h-10 w-8 h-8 rounded-full border border-black flex items-center justify-center hover:bg-black hover:text-white transition">
+                                        <i class="fab fa-x-twitter"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Blog Section -->
+    <section class="lg:py-16 py-10 relative z-[1] overflow-hidden">
+        <div class="blog-bg absolute top-[-50px] end-[-15px] md:w-[220px] md:h-[250px] sm:w-[130px] h-[180px] z-[-1] sm:block hidden">
+            <img src="assets/images/blog-bg-1.png" alt="background-image" loading="lazy" class="w-full h-full object-scale-down rtl:scale-x-[-1]">
+        </div>
+        <div class="blog-bg absolute top-[-50px] start-[-55px] md:w-[230px] md:h-[290px] w-[160px] h-[210px] z-[-1] sm:block hidden">
+            <img src="assets/images/blog-bg-2.png" alt="background-image" loading="lazy" class="w-full h-full object-scale-down rtl:scale-x-[-1]">
+        </div>
+        <div class="md:container w-full mx-auto px-4">
+            <div class="text-center mb-6 lg:mb-8">
+                <h2 class="lg:text-5xl sm:text-4xl text-2xl">Latest from Our Blog</h2>
+                <p class="mt-4 max-w-lg mx-auto md:text-[16px] text-sm">Stay informed with our newest articles and insights.
+                    Tips, trends, and updates delivered fresh</p>
+            </div>
+            <div class="blog-slider swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="border border-primary h-full md:p-4 p-3 rounded-tl-full rounded-tr-full shadow-lg overflow-hidden flex flex-col">
+                            <div class="relative pt-[90%]">
+                                <img src="assets/images/blog-01.png" alt="Blog 1" class="absolute inset-0 h-full w-full object-cover rounded-tl-full rounded-tr-full">
+                            </div>
+                            <div class="flex-1 flex flex-col mt-4 p-2 xl:pt-2 py-0 sm:px-2 px-1">
+                                <div class="h-full">
+                                    <span class="text-xs text-primary font-semibold inline-block mb-2">April 10, 2025</span>
+                                    <h3 class="text-lg md:text-xl mb-2 text-white">
+                                        <a href="blog.html" class="line-clamp-1">5 Secrets to Perfect Pasta Every Time
+                                        </a>
+                                        </h3>
+                                </div>
+                                <div>
+                                    <p class="flex-1 md:mb-4 mb-2 line-clamp-3">Our chef shares essential tips for making restaurant-quality pasta at home, from choosing the right flour to mastering sauces.</p>
+                                    <a href="article.html" class="inline-block mt-auto text-primary font-semibold hover:underline md:text-base text-sm">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="border border-primary h-full md:p-4 p-3 rounded-tl-full rounded-tr-full shadow-lg overflow-hidden flex flex-col">
+                            <div class="relative pt-[90%]">
+                                <img src="assets/images/blog-02.png" alt="Blog 1" class="absolute inset-0 h-full w-full object-cover rounded-tl-full rounded-tr-full">
+                            </div>
+                            <div class="flex-1 flex flex-col mt-4 p-2 xl:pt-2 py-0 sm:px-2 px-1">
+                                <div class="h-full">
+                                    <span class="text-xs text-primary font-semibold inline-block mb-2">March 28, 2025</span>
+                                    <h3 class="text-lg md:text-xl mb-2 text-white">
+                                        <a href="blog.html" class="line-clamp-1">
+                                            How We Source the Freshest Ingredients
+                                        </a>
+                                    </h3>
+                                </div>
+                                <div>
+                                    <p class="flex-1 md:mb-4 mb-2 line-clamp-3">Go behind the scenes with our team to see how we select local produce and ensure every dish is bursting with flavor.</p>
+                                    <a href="article.html" class="inline-block mt-auto text-primary font-semibold hover:underline md:text-base text-sm">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="border border-primary h-full md:p-4 p-3 rounded-tl-full rounded-tr-full shadow-lg overflow-hidden flex flex-col">
+                            <div class="relative pt-[90%]">
+                                <img src="assets/images/blog-03.png" alt="Blog 1" class="absolute inset-0 h-full w-full object-cover rounded-tl-full rounded-tr-full">
+                            </div>
+                            <div class="flex-1 flex flex-col mt-4 p-2 xl:pt-2 py-0 sm:px-2 px-1">
+                                <div class="h-full">
+                                    <span class="text-xs text-primary font-semibold inline-block mb-2">March 15, 2025</span>
+                                    <h3 class="text-lg md:text-xl mb-2 text-white">
+                                        <a href="blog.html" class="line-clamp-1">Meet Our Chef: Culinary Journey</a></h3>
+                                </div>
+                                <div>
+                                    <p class="flex-1 md:mb-4 mb-2 line-clamp-3">Learn about our head chef's passion for food, his favorite dishes, and what inspires his culinary creations.</p>
+                                    <a href="article.html" class="inline-block mt-auto text-primary font-semibold hover:underline md:text-base text-sm">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="border border-primary h-full md:p-4 p-3 rounded-tl-full rounded-tr-full shadow-lg overflow-hidden flex flex-col">
+                            <div class="relative pt-[90%]">
+                                <img src="assets/images/blog-04.png" alt="Blog 1" class="absolute inset-0 h-full w-full object-cover rounded-tl-full rounded-tr-full">
+                            </div>
+                            <div class="flex-1 flex flex-col mt-4 p-2 xl:pt-2 py-0 sm:px-2 px-1">
+                                <div class="h-full"> 
+                                    <span class="text-xs text-primary font-semibold inline-block mb-2">April 15, 2025</span>
+                                    <h3 class="text-lg md:text-xl mb-2 text-white">
+                                        <a href="blog.html" class="line-clamp-1">Experience gourmet art and ambience.
+                                        </a>
+                                        </h3>
+                                </div>
+                                <div>
+                                    <p class="flex-1 md:mb-4 mb-2 line-clamp-3">Experience gourmet artistry crafted to perfection.
+                                        Surround yourself with elegance and unforgettable ambiance.</p>
+                                    <a href="article.html" class="inline-block mt-auto text-primary font-semibold hover:underline md:text-base text-sm">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+    </section>
+    <!-- Testimonial Section -->
+    <section class="lg:py-16 py-10 bg-secondary">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-6 lg:mb-8">
+                <h2 class="lg:text-5xl sm:text-4xl text-2xl">What Our Customers Say</h2>
+                <p class="mt-4 text-white max-w-lg mx-auto md:text-[16px] text-sm">Hear directly from our satisfied customers.
+                    Real stories, real experiences, real results</p>
+            </div>
+            <div class="swiper testimonial-swiper !pb-16">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide testimonial-card bg-secondary rounded-2xl shadow-lg xl:p-8  md:p-6 p-4 flex flex-col items-center text-center border border-white">
+                <img src="assets/images/testimonial-1.png" alt="Customer 1" loading="lazy" class="w-20 h-20 rounded-full md:mb-6 mb-4 border-4 border-primary object-cover">
+                <div class="flex text-primary mb-4">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <p class="text-white mb-4 line-clamp-3">"Absolutely loved the food and the ambiance! The staff was attentive and made our anniversary special."</p>
+                <span class="font-bold text-primary italic">Priya S.</span>
+                </div>
+                <div class="swiper-slide testimonial-card bg-secondary rounded-2xl shadow-lg xl:p-8 md:p-6 p-4 flex flex-col items-center text-center border border-white">
+                <img src="assets/images/testimonial-2.png" alt="Customer 2" loading="lazy" class="w-20 h-20 rounded-full md:mb-6 mb-4 border-4 border-primary object-cover">
+                <div class="flex text-primary mb-4">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p class="text-white mb-4 line-clamp-3">"An unforgettable dining experience — impeccable service, stunning flavors, elegant atmosphere that keeps you coming back."</p>
+                <span class="font-bold text-primary italic">Rahul M.</span>
+                </div>
+                <div class="swiper-slide testimonial-card bg-secondary rounded-2xl shadow-lg xl:p-8  md:p-6 p-4 flex flex-col items-center text-center border border-white">
+                <img src="assets/images/testimonial-3.png" alt="Customer 3" loading="lazy" class="w-20 h-20 rounded-full md:mb-6 mb-4 border-4 border-primary object-cover">
+                <div class="flex text-primary mb-4">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p class="text-white mb-4 line-clamp-3">"Cozy atmosphere, delicious food, and service that makes you feel right at home — a perfect dining spot!"</p>
+                <span class="font-bold text-primary italic">Anjali K.</span>
+                </div>
+            </div>
+            <div class="swiper-pagination mt-6"></div>
+            </div>
+        </div>
+    </section>
+     <section class="lg:py-16 py-10">
+        <div class="md:container w-full mx-auto px-4">
+            <div class="text-center mb-6 lg:mb-8">
+                <h2 class="lg:text-5xl sm:text-4xl text-2xl">Gallery Explorer</h2>
+                <p class="mt-4 max-w-lg mx-auto md:text-[16px] text-sm">Discover stunning visuals in our curated collection.
+                    Browse, zoom, and explore every image with ease</p>
+            </div>
+            <div class="gallery-slider swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="gallery-card relative pt-[100%] rounded-2xl overflow-hidden group">
+                            <img src="assets/images/gallery-1.png" alt="gallery-image" loading="lazy" class="absolute inset-0 w-full h-full object-cover group-hover:scale-[1.06] transition-all duration-500">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="gallery-card relative pt-[100%] rounded-2xl overflow-hidden group">
+                            <img src="assets/images/gallery-2.png" alt="gallery-image" loading="lazy" class="absolute inset-0 w-full h-full object-cover group-hover:scale-[1.06] transition-all duration-500">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="gallery-card relative pt-[100%] rounded-2xl overflow-hidden group">
+                            <img src="assets/images/gallery-3.png" alt="gallery-image" loading="lazy" class="absolute inset-0 w-full h-full object-cover group-hover:scale-[1.06] transition-all duration-500">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="gallery-card relative pt-[100%] rounded-2xl overflow-hidden group">
+                            <img src="assets/images/gallery-4.png" alt="gallery-image" loading="lazy" class="absolute inset-0 w-full h-full object-cover group-hover:scale-[1.06] transition-all duration-500">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="gallery-card relative pt-[100%] rounded-2xl overflow-hidden group">
+                            <img src="assets/images/gallery-5.png" alt="gallery-image" loading="lazy" class="absolute inset-0 w-full h-full object-cover group-hover:scale-[1.06] transition-all duration-500">
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+    </section> 
+    <section class="lg:pb-16 pb-10">
+        <div class="md:container w-full mx-auto px-4">
+            <div class="text-center mb-6 lg:mb-8">
+                <h2 class="lg:text-5xl sm:text-4xl text-2xl">Find Our Restaurants</h2>
+                <p class="mt-4 max-w-lg mx-auto md:text-[16px] text-sm">Discover our locations across the city and visit us for an unforgettable dining experience</p>
+            </div>
+            <div class="flex md:flex-row flex-col-reverse md:gap-6 gap-4">
+                <div class="map-col relative h-72 lg:h-auto md:w-auto w-full md:flex-1 rounded-2xl overflow-hidden">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d50039.97193649962!2d72.8920057165679!3d21.222203925610316!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1698927319352!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" loading="lazy"></iframe>
+                </div>
+                <div class="h-full">
+                    <div class="space-y-4 overflow-y-auto max-h-[513px] md:pe-1">
+                        <div class="location-card border border-primary p-4 rounded-xl cursor-pointer">
+                            <div class="flex items-start gap-3">
+                                <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+                                    <i class="fas fa-city"></i>
+                                </div>
+                                <div class="flex-1">
+                                    <h3 class="text-lg mb-2">Downtown Bistro</h3>
+                                    <p class="text-sm mb-1">123 Main Street, Downtown</p>
+                                    <div class="flex items-center text-xs">
+                                        <i class="fas fa-clock me-1"></i>
+                                        <span>Mon-Fri: 11AM-10PM, Sat-Sun: 10AM-11PM</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="location-card border border-primary p-4 rounded-xl cursor-pointer">
+                            <div class="flex items-start gap-3">
+                                <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+                                    <i class="fas fa-home"></i>
+                                </div>
+                                <div class="flex-1">
+                                    <h3 class="text-lg mb-2">Riverside Grill</h3>
+                                    <p class="text-sm mb-1">456 River Road, Riverside</p>
+                                    <div class="flex items-center text-xs">
+                                        <i class="fas fa-clock me-1"></i>
+                                        <span>Mon-Sun: 10AM-9PM</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="location-card border border-primary p-4 rounded-xl cursor-pointer">
+                            <div class="flex items-start gap-3">
+                                <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+                                    <i class="fas fa-shopping-bag"></i>
+                                </div>
+                                <div class="flex-1">
+                                    <h3 class="text-lg mb-2">Metro Food Court</h3>
+                                    <p class="text-sm mb-1">789 Center Mall, Metro</p>
+                                    <div class="flex items-center text-xs">
+                                        <i class="fas fa-clock me-1"></i>
+                                        <span>Mon-Sun: 10AM-10PM</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="location-card border border-primary p-4 rounded-xl cursor-pointer">
+                            <div class="flex items-start gap-3">
+                                <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+                                    <i class="fas fa-home"></i>
+                                </div>
+                                <div class="flex-1">
+                                    <h3 class="text-lg mb-2">Garden District Cafe</h3>
+                                    <p class="text-sm mb-1">202 Green Avenue, Garden District</p>
+                                    <div class="flex items-center text-xs">
+                                        <i class="fas fa-clock me-1"></i>
+                                        <span>Mon-Sun: 8AM-8PM</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <di>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="border-t border-white/15">
+            <div class="grid grid-cols-1 lg:grid-cols-3 sm:grid-cols-2">
+                <div class="relative pt-[50%] sm:block hidden">
+                    <img src="assets/images/footer-img1.png" alt="Footer Image" loading="lazy" class="absolute inset-0 w-full h-full object-cover"> 
+                </div>
+                <div class="xl:p-12 md:px-6 px-4 md:py-12 py-10 text-center border-b border-white/30 relative z-[1]">
+                    <div class="background-image absolute inset-0 w-full h-full z-[-1]">
+                        <img src="assets/images/bg-img.png" alt="background-image" loading="lazy" class="w-full h-full object-cover">
+                    </div>
+                    <div class="max-w-[350px] w-full mx-auto">
+                        <div class="footer-logo md:max-w-[170px] max-w-[140px] mx-auto md:mb-6 mb-4">
+                            <img src="assets/images/logo.png" alt="Restaurant Logo" class="w-full h-full object-cover">
+                        </div>
+                        <div class="md:mb-8 mb-6">
+                            <h3 class="text-lg text-primary mb-2 block">Visit Us</h3>
+                            <ul>
+                                <li class="mb-2 ">
+                                    Restrochef, Arrondissement, Canada 9578
+                                </li>
+                                <li class="mb-2">
+                                    <span class="me-2 inline-block">Email:</span>
+                                    <a href="mailto: booking@gmail.com" class="hover:text-primary transition-all duration-300">
+                                        booking@gmail.com
+                                    </a>
+                                </li>
+                                <li class="mb-2 ">
+                                    <span class="me-2 inline-block">Call:</span>
+                                    <a href="tel: +1 234 567 890" class="hover:text-primary transition-all duration-300">
+                                    +1 234 567 890
+                                </a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="text-lg text-primary mb-3">Stay Updated</h3>
+                            <p class=" mb-3">Subscribe to our newsletter for promotions and events.</p>
+                            <form class="flex">
+                                <input type="email" placeholder="Your email"
+                                    class="w-full px-4 py-2 rounded-l-lg rtl:rounded-l-none rtl:rounded-r-lg focus:outline-none focus:ring-primary bg-gray-700 text-white">
+                                <button type="submit" class="bg-primary px-4 py-2 rounded-r-lg  hover:bg-opacity-90 transition rtl:scale-x-[-1]">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20"
+                                        fill="#000000">
+                                        <path fill-rule="evenodd"
+                                            d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z"
+                                            clip-rule="evenodd" />
+                                    </svg>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative pt-[50%] lg:block hidden">
+                    <img src="assets/images/footer-img2.png" alt="Footer Image" loading="lazy" class="absolute inset-0 w-full h-full object-cover"> 
+                </div>
+            </div>
+            <div class="py-4 text-center">
+                <div class="md:container w-full px-4 mx-auto">
+                    <div class="flex sm:flex-row flex-col gap-3 justify-between items-center">
+                        <p class="">
+                            © 2025 Restrochef. All rights reserved.
+                        </p>
+                        <ul class="flex items-center gap-4">
+                            <li class="hover:text-primary  transition-all duration-300">
+                                <a href="javascript:void(0)"><i class="fa-brands fa-facebook-f"></i></a> 
+                            </li>
+                            <li class="hover:text-primary  transition-all duration-300">
+                                <a href="javascript:void(0)"><i class="fa-brands fa-instagram"></i></a>                             
+                            </li>
+                            <li class="hover:text-primary  transition-all duration-300">
+                                <a href="javascript:void(0)"><i class="fa-brands fa-pinterest-p"></i></a> 
+                            </li>
+                            <li class="hover:text-primary  transition-all duration-300">
+                                <a href="javascript:void(0)"><i class="fa-brands fa-youtube"></i></a>                            
+                                </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+    </footer>
+    <!-- Enhanced Cart Popup -->
+      <div id="cartPopup"
+        class="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4 hidden">
+        <div
+            class="popup-enter bg-accent border border-white rounded-2xl shadow-2xl w-full max-w-2xl mx-auto overflow-hidden max-h-[85vh] my-5 flex flex-col">
+            <div class="sticky top-0 z-10">
+                <div class="flex justify-between items-center p-4 md:p-6 border-b border-gray-200">
+                    <h2 class="text-xl md:text-2xl text-white">Customize Your Order</h2>
+                    <button id="closePopup" class="text-white hover:text-primary transition p-1">
+                        <i class="fas fa-times text-lg sm:text-xl"></i>
+                    </button>
+                </div>
+
+                <div class="tabs-container flex mt-2 md:mt-4 overflow-x-auto">
+                    <button
+                        class="tab-btn active px-3 md:text-base text-sm sm:px-6 py-2 sm:py-3 font-medium border-b-2 text-primary border-primary whitespace-nowrap">Customize</button>
+                    <button
+                        class="tab-btn px-3 md:text-base text-sm sm:px-6 py-2 sm:py-3 font-medium transition whitespace-nowrap">Nutrition</button>
+                    <button
+                        class="tab-btn px-3 md:text-base text-sm sm:px-6 py-2 sm:py-3 font-medium transition whitespace-nowrap">Reviews</button>
+                </div>
+            </div>
+
+            <div class="overflow-y-auto scrollbar-visible flex-1">
+                <div id="customizeTab" class="tab-content active p-4 md:p-6">
+                    <div class="mb-4 md:mb-6">
+                        <div class="gallery-container relative rounded-xl overflow-hidden bg-gray-100">
+                            <img src="assets/images/cart-img.png" alt="cart-img" class="w-full h-full object-cover">
+                            <div class="absolute bottom-2 right-2 sm:bottom-4 sm:right-4 flex gap-x-1 sm:gap-x-2">
+                                <button
+                                    class="bg-white p-1 sm:p-2 rounded-full shadow-md hover:bg-gray-100 transition w-10 h-10">
+                                    <i class="fas fa-heart text-sm sm:text-base text-gray-600"></i>
+                                </button>
+                                <button
+                                    class="bg-white p-1 sm:p-2 rounded-full shadow-md hover:bg-gray-100 transition w-10 h-10">
+                                    <i class="fas fa-share-alt text-sm sm:text-base text-gray-600"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex justify-between items-start mb-2 sm:mb-4">
+                        <div>
+                            <h3 id="popupItemName" class="text-lg sm:text-2xl"></h3>
+                            <p id="popupItemDesc" class="text-sm sm:text-base"></p>
+                        </div>
+                        <span class="text-primary text-xl md:text-2xl">$14.99</span>
+                    </div>
+
+                    <div class="mb-4 md:mb-6">
+                        <h4 class="text-base md:text-lg text-white mb-2 sm:mb-3">Size</h4>
+                        <div class="grid grid-cols-3 gap-2 sm:gap-3 mobile-full-width">
+                            <div class="custom-radio">
+                                <input type="radio" id="sizeSmall" name="size" value="small" class="hidden" checked>
+                                <label for="sizeSmall"
+                                    class="border border-gray-300 rounded-2xl p-2 sm:p-3 text-center cursor-pointer transition md:text-base text-sm flex flex-col items-center h-full justify-center">
+                                    <span>Small</span>
+                                    <span class="block text-xs sm:text-sm mt-1">10"</span>
+                                </label>
+                            </div>
+                            <div class="custom-radio">
+                                <input type="radio" id="sizeMedium" name="size" value="medium" class="hidden">
+                                <label for="sizeMedium"
+                                    class="border border-gray-300 rounded-2xl p-2 sm:p-3 text-center cursor-pointer transition md:text-base text-sm flex flex-col items-center h-full justify-center">
+                                    <span>Medium</span>
+                                    <span class="block text-xs sm:text-sm mt-1">12" (+$2.00)</span>
+                                </label>
+                            </div>
+                            <div class="custom-radio">
+                                <input type="radio" id="sizeLarge" name="size" value="large" class="hidden">
+                                <label for="sizeLarge"
+                                    class="border border-gray-300 rounded-2xl p-2 sm:p-3 text-center cursor-pointer transition md:text-base text-sm flex flex-col items-center h-full justify-center">
+                                    <span>Large</span>
+                                    <span class="block text-xs sm:text-sm mt-1">14" (+$3.50)</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mb-4 md:mb-6">
+                        <h4 class="text-base md:text-lg text-white mb-2 sm:mb-3">Crust Type</h4>
+                        <div class="grid grid-cols-2 gap-2 sm:gap-3 mobile-full-width">
+                            <div class="custom-radio">
+                                <input type="radio" id="crustThin" name="crust" value="thin" class="hidden" checked>
+                                <label for="crustThin"
+                                    class="block border border-gray-300 rounded-full md:text-base text-sm p-2 !leading-[1] md:p-3 text-center cursor-pointer transition mobile-text-sm">
+                                    <span>Thin Crust</span>
+                                </label>
+                            </div>
+                            <div class="custom-radio">
+                                <input type="radio" id="crustThick" name="crust" value="thick" class="hidden">
+                                <label for="crustThick"
+                                    class="block border border-gray-300 rounded-full md:text-base text-sm p-2 !leading-[1] md:p-3 text-center cursor-pointer transition mobile-text-sm">
+                                    <span>Thick Crust</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mb-4 md:mb-6">
+                        <h4 class="text-base md:text-lg text-white mb-2 sm:mb-3">Extra Toppings ($1.50
+                            each)</h4>
+                        <div class="grid grid-cols-2 gap-2 sm:gap-3 mobile-full-width">
+                            <div class="custom-checkbox">
+                                <input type="checkbox" id="toppingMushroom" name="topping" value="mushroom"
+                                    class="hidden">
+                                <label for="toppingMushroom"
+                                    class="block border border-gray-300 rounded-full md:text-base text-sm py-2 !leading-[1] sm:p-3 cursor-pointer transition mobile-text-sm text-center">
+                                    <span>Mushrooms</span>
+                                </label>
+                            </div>
+                            <div class="custom-checkbox">
+                                <input type="checkbox" id="toppingOlives" name="topping" value="olives" class="hidden">
+                                <label for="toppingOlives"
+                                    class="block border border-gray-300 rounded-full md:text-base text-sm py-2 !leading-[1] sm:p-3 cursor-pointer transition mobile-text-sm text-center">
+                                    <span>Olives</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mb-4 md:mb-6">
+                        <h4 class="text-base md:text-lg text-white mb-2 sm:mb-3">Quantity</h4>
+                        <div class="quantity-spinner flex items-center border border-gray-300 rounded-full w-28 overflow-hidden sm:mr-6">
+                        <button class="decrease px-2.5 py-1.5 text-white transition">
+                            <i class="fas fa-minus text-sm"></i>
+                        </button>
+                        <div class="quantity-value flex-1 text-center font-medium text-base">1</div>
+                        <button class="increase px-2.5 py-1.5 text-white transition">
+                            <i class="fas fa-plus text-sm"></i>
+                        </button>
+                        </div>
+                    </div>
+
+                    <h4 class="text-base md:text-lg text-white mb-2 sm:mb-3">Special Instructions</h4>
+                    <textarea id="specialInstructions"
+                        class="w-full border border-gray-300 rounded-2xl p-3 sm:p-4 text-sm focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20"
+                        placeholder="Any special requests? (e.g., no onions, extra sauce)" rows="2"></textarea>
+                </div>
+
+                <div id="nutritionTab" class="tab-content p-3 sm:p-6">
+                    <h3 class="text-xl md:text-2xl mb-3 sm:mb-4">Nutrition Information</h3>
+
+                    <div class="mb-4 md:mb-6 p-3 sm:p-6 bg-white/10 border border-white/50 rounded-2xl">
+                        <div class="grid grid-cols-3 gap-2 sm:gap-4 text-center mb-3 sm:mb-4">
+                            <div>
+                                <div class="text-2xl md:text-3xl text-primary">850</div>
+                                <div class="text-xs sm:text-sm">Calories</div>
+                            </div>
+                            <div>
+                                <div class="text-2xl md:text-3xl text-primary">38g</div>
+                                <div class="text-xs sm:text-sm">Protein</div>
+                            </div>
+                            <div>
+                                <div class="text-2xl md:text-3xl text-primary">95g</div>
+                                <div class="text-xs sm:text-sm">Carbs</div>
+                            </div>
+                        </div>
+
+                        <div class="space-y-2 sm:space-y-3">
+                            <div>
+                                <div class="flex justify-between mb-1 text-xs sm:text-sm">
+                                    <span class="font-medium">Total Fat</span>
+                                    <span>22g</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-1 sm:h-1.5">
+                                    <div class="bg-primary h-full rounded-full" style="width: 45%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-1 text-xs sm:text-sm">
+                                    <span class="font-medium">Saturated Fat</span>
+                                    <span>8g</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-1 sm:h-1.5">
+                                    <div class="bg-primary h-full rounded-full" style="width: 30%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-1 text-xs sm:text-sm">
+                                    <span class="font-medium">Sodium</span>
+                                    <span>1200mg</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-1 sm:h-1.5">
+                                    <div class="bg-primary h-full rounded-full" style="width: 60%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-1 text-xs sm:text-sm">
+                                    <span class="font-medium">Dietary Fiber</span>
+                                    <span>4g</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-1 sm:h-1.5">
+                                    <div class="bg-primary h-full rounded-full" style="width: 20%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mb-3 sm:mb-4">
+                        <h4 class=" text-white mb-1 sm:mb-2 text-sm sm:text-base">Ingredients</h4>
+                        <p class="text-xs sm:text-sm">Wheat flour, tomato sauce, fresh mozzarella cheese,
+                            basil, olive oil, salt, yeast.</p>
+                    </div>
+
+                    <div>
+                        <h4 class=" text-white mb-1 sm:mb-2 text-sm sm:text-base">Allergens</h4>
+                        <div class="flex flex-wrap gap-1 sm:gap-2">
+                            <span class="bg-primary/15 text-primary text-xs px-2 py-0.5 rounded-full">Gluten</span>
+                            <span class="bg-primary/15 text-primary text-xs px-2 py-0.5 rounded-full">Milk</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="reviewsTab" class="tab-content p-3 sm:p-6">
+                    <h3 class="text-xl md:text-2xl mb-3 sm:mb-4">Customer Reviews</h3>
+
+                    <div class="flex items-center mb-4 md:mb-6">
+                        <div class="me-3 sm:me-4">
+                            <div class="text-2xl md:text-4xl text-primary mb-1">4.8</div>
+                            <div class="flex text-primary text-sm sm:text-base">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                        <div class="flex-1">
+                            <div class="flex items-center mb-1">
+                                <span class="text-xs sm:text-sm font-medium w-6 sm:w-8">5</span>
+                                <div class="w-full bg-gray-200 rounded-full h-1 sm:h-1.5 mx-2">
+                                    <div class="bg-primary h-full rounded-full" style="width: 80%"></div>
+                                </div>
+                                <span class="text-xs sm:text-sm">128</span>
+                            </div>
+                            <div class="flex items-center mb-1">
+                                <span class="text-xs sm:text-sm font-medium w-6 sm:w-8">4</span>
+                                <div class="w-full bg-gray-200 rounded-full h-1 sm:h-1.5 mx-2">
+                                    <div class="bg-primary h-full rounded-full" style="width: 15%"></div>
+                                </div>
+                                <span class="text-xs sm:text-sm">24</span>
+                            </div>
+                            <div class="flex items-center mb-1">
+                                <span class="text-xs sm:text-sm font-medium w-6 sm:w-8">3</span>
+                                <div class="w-full bg-gray-200 rounded-full h-1 sm:h-1.5 mx-2">
+                                    <div class="bg-primary h-full rounded-full" style="width: 3%"></div>
+                                </div>
+                                <span class="text-xs sm:text-sm">5</span>
+                            </div>
+                            <div class="flex items-center mb-1">
+                                <span class="text-xs sm:text-sm font-medium w-6 sm:w-8">2</span>
+                                <div class="w-full bg-gray-200 rounded-full h-1 sm:h-1.5 mx-2">
+                                    <div class="bg-primary h-full rounded-full" style="width: 1%"></div>
+                                </div>
+                                <span class="text-xs sm:text-sm">2</span>
+                            </div>
+                            <div class="flex items-center">
+                                <span class="text-xs sm:text-sm font-medium w-6 sm:w-8">1</span>
+                                <div class="w-full bg-gray-200 rounded-full h-1 sm:h-1.5 mx-2">
+                                    <div class="bg-primary h-full rounded-full" style="width: 1%"></div>
+                                </div>
+                                <span class="text-xs sm:text-sm">1</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="space-y-4 sm:space-y-6">
+                        <div class="border-b border-white/20 pb-4 sm:pb-6">
+                            <div class="flex items-center mb-2 sm:mb-3">
+                                <div class="flex text-primary text-sm sm:text-base me-2 sm:me-3">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <span class="text-xs sm:text-sm">2 days ago</span>
+                            </div>
+                            <h4 class=" mb-1 text-sm sm:text-base">Best pizza in town!</h4>
+                            <p class="mb-1 sm:mb-2 text-xs sm:text-sm">Authentic Italian taste with fresh
+                                ingredients. The crust is perfectly crispy.</p>
+                            <div class="flex items-center text-xs sm:text-sm">
+                                <img src="https://randomuser.me/api/portraits/women/44.jpg"
+                                    class="w-5 h-5 sm:w-6 sm:h-6 rounded-full me-1 sm:me-2">
+                                <span>Sarah J.</span>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="flex items-center mb-2 sm:mb-3">
+                                <div class="flex text-primary text-sm sm:text-base me-2 sm:me-3">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                                <span class="text-xs sm:text-sm">1 week ago</span>
+                            </div>
+                            <h4 class=" mb-1 text-sm sm:text-base">Great flavor</h4>
+                            <p class="mb-1 sm:mb-2 text-xs sm:text-sm">The balance of sauce and cheese is
+                                perfect. Would order again!</p>
+                            <div class="flex items-center text-xs sm:text-sm">
+                                <img src="https://randomuser.me/api/portraits/men/32.jpg"
+                                    class="w-5 h-5 sm:w-6 sm:h-6 rounded-full me-1 sm:me-2">
+                                <span>Michael T.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sticky bottom-0 border-t border-gray-200 p-3 sm:p-6 flex justify-between gap-3 items-center">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <div class="text-xs sm:text-sm mb-1">Total</div>
+                        <div class="text-xl sm:text-2xl font-bold text-primary">$14.99</div>
+                    </div>
+                </div>
+                <button id="addToCartBtn"
+                    class="btn-primary">
+                    <i class="fas fa-shopping-cart text-sm sm:text-base"></i>
+                    <span>Add to Cart</span>
+                </button>
+            </div>
+        </div>
+    </div>  
+
+    <div id="qr-modal" class="qr-modal">
+        <div class="qr-modal-inner">
+            <div class="qr-modal-wrapper">
+                <div class="qr-bg">
+                    <img src="assets/images/qr-bg.png" alt="qr background image" loading="lazy">
+                </div>
+                <div class="qr-modal-content">
+                    <h2>View Dining Table</h2>
+                    <span class="qr-label">Table 5</span>
+                    <div class="qr-bottom-content">
+                        <div class="qr-icon">
+                            <img src="assets/images/qr-image.png" alt="qr logo image" loading="lazy">
+                        </div>
+                        <div class="qr-image">
+                            <img src="assets/images/qr.png" alt="qr image" loading="lazy">
+                        </div>
+                        <p>Scan Me</p>
+                    </div>
+                    <div class="qr-btn-wrapper">
+                        <a href="javascript:" class="btn">
+                            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_2343_10122)">
+                                <path d="M17.1111 22H4.88887C3.58309 22 2.3554 21.4915 1.43195 20.568C0.50854 19.6447 0 18.417 0 17.1111V15.8888C0 15.2138 0.547179 14.6665 1.22223 14.6665C1.89728 14.6665 2.44446 15.2138 2.44446 15.8888V17.1111C2.44446 17.764 2.69875 18.3778 3.16037 18.8395C3.62211 19.3012 4.23594 19.5555 4.88887 19.5555H17.1111C17.764 19.5555 18.3778 19.3012 18.8395 18.8395C19.3012 18.3778 19.5555 17.7639 19.5555 17.1111V15.8888C19.5555 15.2138 20.1027 14.6665 20.7777 14.6665C21.4527 14.6665 22 15.2138 22 15.8888V17.1111C22 18.4169 21.4915 19.6445 20.568 20.568C19.6446 21.4915 18.4169 22 17.1111 22ZM11 17.111C10.8309 17.111 10.6699 17.0767 10.5235 17.0147C10.3869 16.957 10.2585 16.8731 10.1462 16.7634C10.1461 16.7634 10.1461 16.7633 10.1461 16.7633C10.1453 16.7626 10.1445 16.7618 10.1436 16.7609C10.1434 16.7608 10.1432 16.7605 10.143 16.7603C10.1423 16.7597 10.1417 16.759 10.141 16.7584C10.1406 16.758 10.1402 16.7576 10.1398 16.7571C10.1394 16.7567 10.1388 16.7562 10.1384 16.7558C10.1376 16.755 10.1366 16.754 10.1358 16.7532L5.24687 11.8642C4.76958 11.3869 4.76958 10.613 5.24687 10.1357C5.72416 9.65842 6.49809 9.65837 6.97538 10.1357L9.77779 12.9381V1.22223C9.77775 0.547179 10.3249 0 11 0C11.675 0 12.2222 0.547179 12.2222 1.22223V12.9381L15.0246 10.1357C15.5019 9.65842 16.2759 9.65842 16.7531 10.1357C17.2304 10.613 17.2304 11.3869 16.7531 11.8642L11.8642 16.7531C11.8634 16.7539 11.8624 16.7549 11.8616 16.7557C11.8611 16.7562 11.8606 16.7567 11.8602 16.7571C11.8598 16.7575 11.8594 16.7579 11.859 16.7583C11.8584 16.759 11.8577 16.7596 11.8571 16.7602C11.8569 16.7604 11.8566 16.7607 11.8564 16.7609C11.8556 16.7617 11.8548 16.7625 11.854 16.7632C11.8539 16.7632 11.8539 16.7633 11.8539 16.7633C11.8404 16.7764 11.8268 16.7892 11.8129 16.8015C11.7106 16.8928 11.5966 16.964 11.476 17.0148C11.4756 17.015 11.4753 17.0151 11.4748 17.0153C11.4744 17.0155 11.474 17.0157 11.4735 17.0159C11.3278 17.0772 11.1679 17.111 11 17.111Z" fill="white"/>
+                                </g>
+                                <defs>
+                                <clipPath id="clip0_2343_10122">
+                                <rect width="22" height="22" fill="white"/>
+                                </clipPath>
+                                </defs>
+                                </svg>                            
+                        </a>
+                        <a href="javascript:" class="btn copy-btn">
+                            Click To Link Copy
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./assets/js/swiper-bundle.min.js"></script>
+    <script src="./assets/js/main.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Restrochef | WorDo</title>
+    <meta name="author" content="Wordo" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+    <meta name="description" content="Restaurant is a powerful dashboard addon by Wordo for managing food orders, reservations, and menus seamlessly." />
+    <meta name="keywords" content="Restaurant, Food Dashboard, Restaurant Addon, Wordo, Restaurant Admin Panel, Food Order Management, Restaurant POS" />
+    <link rel="icon" href="assets/images/favicon.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/all.min.css" />
+  <link rel="stylesheet" href="./assets/css/tailwind.css" />
+</head>
+
+
+<body>
+    <div class="border-b text-sm py-3 hidden lg:block border-white/60">
+        <div class="md:container w-full mx-auto px-4">
+            <div class="flex items-center justify-between gap-6">
+                <ul class="flex itemx-center announcebar-wrp">
+                    <li class="pe-3 me-3 border-e border-white/60">
+                        <span class="me-2 inline-block font-semibold">Visit us :</span> Restrochef, Arrondissement, Canada 9578
+                    </li>
+                    <li>
+                        <span class="me-2 inline-block font-semibold">Call :</span>
+                        <a href="tel: +1 234 567 890" class="hover:text-primary transition-all duration-300">
+                        +1 234 567 890
+                    </a></li>
+                </ul>
+                <ul class="flex items-end announcebar-wrp">
+                    <li class="pe-3 me-3 border-e border-white/60">
+                        <span class="me-2 inline-block font-semibold">Email :</span>
+                        <a href="mailto: booking@gmail.com" class="hover:text-primary transition-all duration-300">
+                            booking@gmail.com
+                        </a>
+                    </li>
+                    <li>
+                        <ul class="flex items-center gap-4">
+                            <li class="hover:text-primary transition-all duration-300">
+                                <a href="javascript:void(0)"><i class="fa-brands fa-facebook-f"></i></a> 
+                            </li>
+                            <li class="hover:text-primary transition-all duration-300">
+                                <a href="javascript:void(0)"><i class="fa-brands fa-instagram"></i></a>                             
+                            </li>
+                            <li class="hover:text-primary transition-all duration-300">
+                                <a href="javascript:void(0)"><i class="fa-brands fa-pinterest-p"></i></a> 
+                            </li>
+                            <li class="hover:text-primary transition-all duration-300">
+                                <a href="javascript:void(0)"><i class="fa-brands fa-youtube"></i></a>                            
+                                </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <header class="shadow-md sticky bg-accent top-0 z-50 lg:border-white/20 border-b border-white">
+        <div class="md:container w-full mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <!-- Logo Section -->
+                <h1 class="logo">
+                    <a href="index.html" class="block lg:max-w-[170px] max-w-[120px] w-full">
+                        <img src="assets/images/logo.png" alt="Restaurant Logo" class="logo-img">
+                    </a>
+  
+                </h1>
+  
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex items-center lg:gap-8 gap-4">
+                    <a href="menu-list.html" class="nav-link hover:text-primary transition-all duration-300 flex items-center gap-2">
+                        <i class="fas fa-utensils"></i> Menu
+                    </a>
+                    <a href="index.html#offer" class="nav-link hover:text-primary transition-all duration-300 flex items-center gap-2">
+                        <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15.2286 8.55338C15.1615 8.41611 15.1615 8.25868 15.2286 8.12144L15.8505 6.84919C16.1967 6.14081 15.9224 5.29649 15.2259 4.92695L13.975 4.26322C13.84 4.19164 13.7475 4.06424 13.7211 3.91381L13.4764 2.51897C13.3402 1.74236 12.6218 1.2205 11.8413 1.33094L10.4391 1.52927C10.2878 1.55064 10.1382 1.50198 10.0284 1.39578L9.0106 0.411194C8.4439 -0.137048 7.5561 -0.137081 6.98943 0.411194L5.97163 1.39588C5.86181 1.50211 5.71216 1.55067 5.56085 1.52937L4.15872 1.33103C3.37791 1.22053 2.6598 1.74246 2.52356 2.51907L2.27892 3.91384C2.2525 4.0643 2.15998 4.19167 2.02505 4.26329L0.774132 4.92702C0.0776414 5.29653 -0.196708 6.14091 0.149551 6.84929L0.771429 8.1215C0.838518 8.25878 0.838518 8.41621 0.771429 8.55345L0.149518 9.82567C-0.196741 10.534 0.0776087 11.3784 0.774099 11.7479L2.02502 12.4116C2.15998 12.4832 2.2525 12.6106 2.27892 12.7611L2.52356 14.1559C2.64758 14.8629 3.2538 15.3587 3.95051 15.3586C4.01913 15.3586 4.08876 15.3538 4.15875 15.3439L5.56088 15.1456C5.71209 15.1241 5.86184 15.1728 5.97166 15.279L6.98943 16.2636C7.27283 16.5378 7.63635 16.6748 8 16.6748C8.36355 16.6748 8.7273 16.5377 9.01057 16.2636L10.0284 15.279C10.1382 15.1728 10.2879 15.1243 10.4391 15.1456L11.8413 15.3439C12.6222 15.4544 13.3402 14.9325 13.4764 14.1559L13.7211 12.7611C13.7475 12.6106 13.8401 12.4832 13.975 12.4116L15.2259 11.7479C15.9224 11.3784 16.1967 10.534 15.8505 9.82564L15.2286 8.55338ZM6.07653 4.00965C7.04873 4.00965 7.8397 4.80062 7.8397 5.77283C7.8397 6.74504 7.04873 7.53601 6.07653 7.53601C5.10432 7.53601 4.31335 6.74504 4.31335 5.77283C4.31335 4.80062 5.10432 4.00965 6.07653 4.00965ZM5.16646 11.8509C5.07256 11.9448 4.94949 11.9918 4.82645 11.9918C4.70341 11.9918 4.58031 11.9449 4.48645 11.8509C4.29866 11.6632 4.29866 11.3587 4.48645 11.1709L10.8335 4.82384C11.0213 4.63606 11.3258 4.63606 11.5136 4.82384C11.7013 5.01163 11.7013 5.3161 11.5136 5.50389L5.16646 11.8509ZM9.92341 12.6652C8.9512 12.6652 8.16023 11.8742 8.16023 10.902C8.16023 9.92982 8.9512 9.13885 9.92341 9.13885C10.8956 9.13885 11.6866 9.92982 11.6866 10.902C11.6866 11.8742 10.8956 12.6652 9.92341 12.6652Z" fill="white"/>
+                            <path d="M9.92255 10.1006C9.48064 10.1006 9.12109 10.4601 9.12109 10.902C9.12109 11.3439 9.48061 11.7034 9.92255 11.7034C10.3645 11.7034 10.724 11.3439 10.724 10.902C10.724 10.4601 10.3645 10.1006 9.92255 10.1006Z" fill="white"/>
+                            <path d="M6.07486 4.97168C5.63295 4.97168 5.27344 5.33119 5.27344 5.7731C5.27344 6.21501 5.63295 6.57456 6.07486 6.57456C6.51677 6.57456 6.87632 6.21505 6.87632 5.7731C6.87628 5.33123 6.51677 4.97168 6.07486 4.97168Z" fill="white"/>
+                            </svg>
+                        Offer
+                    </a>
+                    <a href="blog.html" class="nav-link hover:text-primary transition-all duration-300 flex items-center gap-2">
+                        <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M10.6337 10.7613L8.68832 11.4637C8.55592 11.5115 8.40861 11.4777 8.30945 11.3767C8.21029 11.2758 8.17704 11.1259 8.22404 10.9912L8.91416 9.01133C8.91817 9.00025 8.9239 8.99033 8.9325 8.98217L14.0791 3.74383C14.333 3.48542 14.7452 3.48542 14.9991 3.74383L15.8096 4.56867C16.0635 4.82708 16.0635 5.2465 15.8096 5.50492L10.6624 10.7427C10.6543 10.7514 10.6446 10.7572 10.6337 10.7613ZM12.61 10.4107V12.25C12.61 12.7143 12.4289 13.1594 12.1062 13.4872C11.7841 13.8157 11.3467 14 10.8905 14H1.71955C1.2633 14 0.825958 13.8157 0.503829 13.4872C0.181126 13.1594 0 12.7143 0 12.25V4.08333H12.1246L8.12144 8.15733C7.99305 8.288 7.89446 8.44667 7.8337 8.62167L7.14359 10.6009C6.94871 11.1597 7.08742 11.7822 7.49896 12.2016C7.91108 12.6204 8.52267 12.7616 9.07178 12.5632L11.0166 11.8609C11.1885 11.7991 12.61 10.4107 12.61 10.4107ZM2.86592 11.0833H4.68234C4.99874 11.0833 5.25552 10.822 5.25552 10.5C5.25552 10.178 4.99874 9.91667 4.68234 9.91667H2.86592C2.54952 9.91667 2.29274 10.178 2.29274 10.5C2.29274 10.822 2.54952 11.0833 2.86592 11.0833ZM2.86592 8.75H5.82871C6.1451 8.75 6.40189 8.48867 6.40189 8.16667C6.40189 7.84467 6.1451 7.58333 5.82871 7.58333H2.86592C2.54952 7.58333 2.29274 7.84467 2.29274 8.16667C2.29274 8.48867 2.54952 8.75 2.86592 8.75ZM2.86592 6.41667H8.12144C8.43784 6.41667 8.69463 6.15533 8.69463 5.83333C8.69463 5.51133 8.43784 5.25 8.12144 5.25H2.86592C2.54952 5.25 2.29274 5.51133 2.29274 5.83333C2.29274 6.15533 2.54952 6.41667 2.86592 6.41667ZM0 2.91667V1.75C0 1.28567 0.181126 0.840583 0.503829 0.51275C0.825958 0.184333 1.2633 0 1.71955 0H10.8905C11.3467 0 11.7841 0.184333 12.1062 0.51275C12.4289 0.840583 12.61 1.28567 12.61 1.75V2.91667H0Z" fill="white"/>
+                            </svg>                        
+                        Blog
+                    </a>
+                    <a href="contact.html" class="nav-link  hover:text-primary transition-all duration-300 flex items-center gap-2">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15.2244 11.8278L12.9014 10.2048C12.5976 9.99297 12.2425 9.88127 11.8743 9.88127C11.2889 9.88127 10.7393 10.1684 10.4045 10.6488L9.86528 11.4216C8.96151 10.8155 7.95304 9.96916 6.99166 9.00796C6.03046 8.04676 5.18429 7.03829 4.57833 6.13452L5.35079 5.59527C5.74455 5.32109 6.00753 4.91035 6.09104 4.43903C6.17438 3.96806 6.06933 3.49218 5.7948 3.09825L4.17214 0.775262C3.83284 0.289936 3.28535 0 2.70741 0C2.50712 0 2.31067 0.0353665 2.12369 0.104349C1.91131 0.182785 1.71347 0.27908 1.51948 0.400937L1.19873 0.626793C1.11854 0.689122 1.04396 0.757404 0.972523 0.828837C0.581215 1.21997 0.303535 1.7151 0.146837 2.30058C-0.521801 4.80705 1.13465 8.59722 4.26861 11.7312C6.90044 14.363 10.0622 15.9979 12.5199 15.9983C12.9408 15.9983 13.3377 15.9493 13.6994 15.8526C14.2849 15.6961 14.78 15.4184 15.1715 15.0269C15.2426 14.9558 15.3105 14.8813 15.3833 14.7871L15.6094 14.4646C15.7198 14.2881 15.816 14.0902 15.8954 13.8763C16.1688 13.1374 15.8928 12.2949 15.2244 11.8278Z" fill="white"/>
+                            </svg>
+                            Contact
+                    </a>
+                </nav>
+                <div class="flex items-center lg:gap-8 gap-4">
+                    <div class="relative">
+                        <a href="cart.html">
+                            <i class="fas fa-shopping-cart me-1"></i> Cart
+                            <span class="cart-badge">3</span>
+                        </a>
+                    </div>
+                    <a href="menu-list.html"
+                        class="btn-primary !leading-[1] !hidden md:!flex">
+                            Order Now
+                    </a>
+                    <div class="md:hidden">
+                        <button id="mobile-menu-button"
+                            class=" focus:outline-none w-[20px]">
+                            <i class="fas fa-bars text-xl"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+  
+            <!-- Mobile Navigation Menu -->
+            <div id="mobile-menu" class="mobile-menu md:hidden">
+                <div class="bg-white rounded-lg shadow-lg p-4 space-y-3 flex flex-col border border-gray-100">
+                    <a href="menu-list.html" class="nav-link font-medium text-accent hover:text-primary transition-all duration-300 inline-flex items-center gap-2 w-fit text-sm">
+                        <i class="fas fa-utensils"></i> Menu
+                    </a>
+                    <a href="index.html#offer" class="nav-link font-medium text-accent hover:text-primary transition-all duration-300 inline-flex items-center gap-2 w-fit text-sm">
+                        <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15.2286 8.55338C15.1615 8.41611 15.1615 8.25868 15.2286 8.12144L15.8505 6.84919C16.1967 6.14081 15.9224 5.29649 15.2259 4.92695L13.975 4.26322C13.84 4.19164 13.7475 4.06424 13.7211 3.91381L13.4764 2.51897C13.3402 1.74236 12.6218 1.2205 11.8413 1.33094L10.4391 1.52927C10.2878 1.55064 10.1382 1.50198 10.0284 1.39578L9.0106 0.411194C8.4439 -0.137048 7.5561 -0.137081 6.98943 0.411194L5.97163 1.39588C5.86181 1.50211 5.71216 1.55067 5.56085 1.52937L4.15872 1.33103C3.37791 1.22053 2.6598 1.74246 2.52356 2.51907L2.27892 3.91384C2.2525 4.0643 2.15998 4.19167 2.02505 4.26329L0.774132 4.92702C0.0776414 5.29653 -0.196708 6.14091 0.149551 6.84929L0.771429 8.1215C0.838518 8.25878 0.838518 8.41621 0.771429 8.55345L0.149518 9.82567C-0.196741 10.534 0.0776087 11.3784 0.774099 11.7479L2.02502 12.4116C2.15998 12.4832 2.2525 12.6106 2.27892 12.7611L2.52356 14.1559C2.64758 14.8629 3.2538 15.3587 3.95051 15.3586C4.01913 15.3586 4.08876 15.3538 4.15875 15.3439L5.56088 15.1456C5.71209 15.1241 5.86184 15.1728 5.97166 15.279L6.98943 16.2636C7.27283 16.5378 7.63635 16.6748 8 16.6748C8.36355 16.6748 8.7273 16.5377 9.01057 16.2636L10.0284 15.279C10.1382 15.1728 10.2879 15.1243 10.4391 15.1456L11.8413 15.3439C12.6222 15.4544 13.3402 14.9325 13.4764 14.1559L13.7211 12.7611C13.7475 12.6106 13.8401 12.4832 13.975 12.4116L15.2259 11.7479C15.9224 11.3784 16.1967 10.534 15.8505 9.82564L15.2286 8.55338ZM6.07653 4.00965C7.04873 4.00965 7.8397 4.80062 7.8397 5.77283C7.8397 6.74504 7.04873 7.53601 6.07653 7.53601C5.10432 7.53601 4.31335 6.74504 4.31335 5.77283C4.31335 4.80062 5.10432 4.00965 6.07653 4.00965ZM5.16646 11.8509C5.07256 11.9448 4.94949 11.9918 4.82645 11.9918C4.70341 11.9918 4.58031 11.9449 4.48645 11.8509C4.29866 11.6632 4.29866 11.3587 4.48645 11.1709L10.8335 4.82384C11.0213 4.63606 11.3258 4.63606 11.5136 4.82384C11.7013 5.01163 11.7013 5.3161 11.5136 5.50389L5.16646 11.8509ZM9.92341 12.6652C8.9512 12.6652 8.16023 11.8742 8.16023 10.902C8.16023 9.92982 8.9512 9.13885 9.92341 9.13885C10.8956 9.13885 11.6866 9.92982 11.6866 10.902C11.6866 11.8742 10.8956 12.6652 9.92341 12.6652Z" fill="white"/>
+                            <path d="M9.92255 10.1006C9.48064 10.1006 9.12109 10.4601 9.12109 10.902C9.12109 11.3439 9.48061 11.7034 9.92255 11.7034C10.3645 11.7034 10.724 11.3439 10.724 10.902C10.724 10.4601 10.3645 10.1006 9.92255 10.1006Z" fill="black"/>
+                            <path d="M6.07486 4.97168C5.63295 4.97168 5.27344 5.33119 5.27344 5.7731C5.27344 6.21501 5.63295 6.57456 6.07486 6.57456C6.51677 6.57456 6.87632 6.21505 6.87632 5.7731C6.87628 5.33123 6.51677 4.97168 6.07486 4.97168Z" fill="black"/>
+                            </svg>
+                        Offer
+                    </a>
+                    <a href="blog.html" class="nav-link font-medium text-accent hover:text-primary transition-all duration-300 inline-flex items-center gap-2 w-fit text-sm">
+                        <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M10.6337 10.7613L8.68832 11.4637C8.55592 11.5115 8.40861 11.4777 8.30945 11.3767C8.21029 11.2758 8.17704 11.1259 8.22404 10.9912L8.91416 9.01133C8.91817 9.00025 8.9239 8.99033 8.9325 8.98217L14.0791 3.74383C14.333 3.48542 14.7452 3.48542 14.9991 3.74383L15.8096 4.56867C16.0635 4.82708 16.0635 5.2465 15.8096 5.50492L10.6624 10.7427C10.6543 10.7514 10.6446 10.7572 10.6337 10.7613ZM12.61 10.4107V12.25C12.61 12.7143 12.4289 13.1594 12.1062 13.4872C11.7841 13.8157 11.3467 14 10.8905 14H1.71955C1.2633 14 0.825958 13.8157 0.503829 13.4872C0.181126 13.1594 0 12.7143 0 12.25V4.08333H12.1246L8.12144 8.15733C7.99305 8.288 7.89446 8.44667 7.8337 8.62167L7.14359 10.6009C6.94871 11.1597 7.08742 11.7822 7.49896 12.2016C7.91108 12.6204 8.52267 12.7616 9.07178 12.5632L11.0166 11.8609C11.1885 11.7991 12.61 10.4107 12.61 10.4107ZM2.86592 11.0833H4.68234C4.99874 11.0833 5.25552 10.822 5.25552 10.5C5.25552 10.178 4.99874 9.91667 4.68234 9.91667H2.86592C2.54952 9.91667 2.29274 10.178 2.29274 10.5C2.29274 10.822 2.54952 11.0833 2.86592 11.0833ZM2.86592 8.75H5.82871C6.1451 8.75 6.40189 8.48867 6.40189 8.16667C6.40189 7.84467 6.1451 7.58333 5.82871 7.58333H2.86592C2.54952 7.58333 2.29274 7.84467 2.29274 8.16667C2.29274 8.48867 2.54952 8.75 2.86592 8.75ZM2.86592 6.41667H8.12144C8.43784 6.41667 8.69463 6.15533 8.69463 5.83333C8.69463 5.51133 8.43784 5.25 8.12144 5.25H2.86592C2.54952 5.25 2.29274 5.51133 2.29274 5.83333C2.29274 6.15533 2.54952 6.41667 2.86592 6.41667ZM0 2.91667V1.75C0 1.28567 0.181126 0.840583 0.503829 0.51275C0.825958 0.184333 1.2633 0 1.71955 0H10.8905C11.3467 0 11.7841 0.184333 12.1062 0.51275C12.4289 0.840583 12.61 1.28567 12.61 1.75V2.91667H0Z" fill="black"/>
+                            </svg>                        
+                        Blog
+                    </a>
+                    <a href="contact.html" class="nav-link text-accent font-medium hover:text-primary transition-all duration-300 inline-flex items-center gap-2 w-fit text-sm">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15.2244 11.8278L12.9014 10.2048C12.5976 9.99297 12.2425 9.88127 11.8743 9.88127C11.2889 9.88127 10.7393 10.1684 10.4045 10.6488L9.86528 11.4216C8.96151 10.8155 7.95304 9.96916 6.99166 9.00796C6.03046 8.04676 5.18429 7.03829 4.57833 6.13452L5.35079 5.59527C5.74455 5.32109 6.00753 4.91035 6.09104 4.43903C6.17438 3.96806 6.06933 3.49218 5.7948 3.09825L4.17214 0.775262C3.83284 0.289936 3.28535 0 2.70741 0C2.50712 0 2.31067 0.0353665 2.12369 0.104349C1.91131 0.182785 1.71347 0.27908 1.51948 0.400937L1.19873 0.626793C1.11854 0.689122 1.04396 0.757404 0.972523 0.828837C0.581215 1.21997 0.303535 1.7151 0.146837 2.30058C-0.521801 4.80705 1.13465 8.59722 4.26861 11.7312C6.90044 14.363 10.0622 15.9979 12.5199 15.9983C12.9408 15.9983 13.3377 15.9493 13.6994 15.8526C14.2849 15.6961 14.78 15.4184 15.1715 15.0269C15.2426 14.9558 15.3105 14.8813 15.3833 14.7871L15.6094 14.4646C15.7198 14.2881 15.816 14.0902 15.8954 13.8763C16.1688 13.1374 15.8928 12.2949 15.2244 11.8278Z" fill="black"/>
+                            </svg>
+                            Contact
+                    </a>
+                    <a href="checkout.html"
+                    class="btn-primary !leading-[1] w-fit"> Order Now
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="lg:py-16 py-10 order-track-page">
+        <div class="md:container w-full mx-auto px-4">
+            <div class="progressbar-wrapper md:p-8 p-4 bg-secondary rounded-3xl max-w-6xl mx-auto">
+                <div class="text-center mb-10 lg:mb-12">
+                    <span class="text-lg sm:text-xl mb-4 block">Order Tracking</span>
+                    <h2 class="md:text-xl text-base font-semibold">Order ID: 20620250220091830</h2>
+                </div>
+                <ul id="progressbar" class="flex flex-nowrap overflow-auto md:pb-0 pb-2">
+                  <li class="text-base w-full flex flex-col items-center relative gap-2.5 list-none active">
+                    <div class="progressbar-icon flex items-center justify-center rounded-full sm:p-3 p-2.5 bg-white sm:w-10 sm:h-10 w-8 h-8 relative z-[1]">
+                      <i class="fas fa-box text-black sm:text-lg text-[16px]"></i>
+                    </div>
+                    <span class="text-center sm:mx-3 mx-2 md:text-base sm:text-sm text-xs sm:font-semibold">Order Placed</span>
+                  </li>
+                  <li class="text-base w-full flex flex-col items-center relative gap-2.5 list-none">
+                    <div class="progressbar-icon flex items-center justify-center rounded-full sm:p-3 p-2.5 bg-white sm:w-10 sm:h-10 w-8 h-8 relative z-[1]">
+                      <i class="fas fa-fire text-black sm:text-lg text-[16px]"></i>
+                    </div>
+                    <span class="text-center sm:mx-3 mx-2 md:text-base sm:text-sm text-xs sm:font-semibold">In The Kitchen</span>
+                  </li>
+                  <li class="text-base w-full flex flex-col items-center relative gap-2.5 list-none">
+                    <div class="progressbar-icon flex items-center justify-center rounded-full sm:p-3 p-2.5 bg-white sm:w-10 sm:h-10 w-8 h-8 relative z-[1]">
+                      <i class="fas fa-truck text-black sm:text-lg text-[16px]"></i>
+                    </div>
+                    <span class="text-center sm:mx-3 mx-2 md:text-base sm:text-sm text-xs sm:font-semibold">On The Way</span>
+                  </li>
+                  <li class="text-base w-full flex flex-col items-center relative gap-2.5 list-none">
+                    <div class="progressbar-icon flex items-center justify-center rounded-full sm:p-3 p-2.5 bg-white sm:w-10 sm:h-10 w-8 h-8 relative z-[1]">
+                      <i class="fas fa-box-open text-black sm:text-lg text-[16px]"></i>
+                    </div>
+                    <span class="text-center sm:mx-3 mx-2 md:text-base sm:text-sm text-xs sm:font-semibold">Delivered</span>
+                  </li>
+                </ul>
+                <div class="flex justify-center lg:mt-12 md:mt-10 mt-8">
+                  <div class="flex">
+                    <a href="cart.html" class="btn-primary">view order
+                      <i class="fas fa-arrow-right"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+        </div> 
+    </section>
+    <footer class="border-t border-white/15">
+        <div class="grid grid-cols-1 lg:grid-cols-3 sm:grid-cols-2">
+            <div class="relative pt-[50%] sm:block hidden">
+                <img src="assets/images/footer-img1.png" alt="Footer Image" loading="lazy" class="absolute inset-0 w-full h-full object-cover"> 
+            </div>
+            <div class="xl:p-12 md:px-6 px-4 md:py-12 py-10 text-center border-b border-white/30 relative z-[1]">
+                <div class="background-image absolute inset-0 w-full h-full z-[-1]">
+                    <img src="assets/images/bg-img.png" alt="background-image" loading="lazy" class="w-full h-full object-cover">
+                </div>
+                <div class="max-w-[350px] w-full mx-auto">
+                    <div class="footer-logo md:max-w-[170px] max-w-[140px] mx-auto md:mb-6 mb-4">
+                        <img src="assets/images/logo.png" alt="Restaurant Logo" class="w-full h-full object-cover">
+                    </div>
+                    <div class="md:mb-8 mb-6">
+                        <h3 class="text-lg text-primary mb-2 block">Visit Us</h3>
+                        <ul>
+                            <li class="mb-2 ">
+                                Restrochef, Arrondissement, Canada 9578
+                            </li>
+                            <li class="mb-2">
+                                <span class="me-2 inline-block">Email:</span>
+                                <a href="mailto: booking@gmail.com" class="hover:text-primary transition-all duration-300">
+                                    booking@gmail.com
+                                </a>
+                            </li>
+                            <li class="mb-2 ">
+                                <span class="me-2 inline-block">Call:</span>
+                                <a href="tel: +1 234 567 890" class="hover:text-primary transition-all duration-300">
+                                +1 234 567 890
+                            </a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-lg text-primary mb-3">Stay Updated</h3>
+                        <p class=" mb-3">Subscribe to our newsletter for promotions and events.</p>
+                        <form class="flex">
+                            <input type="email" placeholder="Your email"
+                                class="w-full px-4 py-2 rounded-l-lg rtl:rounded-l-none rtl:rounded-r-lg focus:outline-none focus:ring-primary bg-gray-700 text-white">
+                            <button type="submit" class="bg-primary px-4 py-2 rounded-r-lg  hover:bg-opacity-90 transition rtl:scale-x-[-1]">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20"
+                                    fill="#000000">
+                                    <path fill-rule="evenodd"
+                                        d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="relative pt-[50%] lg:block hidden">
+                <img src="assets/images/footer-img2.png" alt="Footer Image" loading="lazy" class="absolute inset-0 w-full h-full object-cover"> 
+            </div>
+        </div>
+        <div class="py-4 text-center">
+            <div class="md:container w-full px-4 mx-auto">
+                <div class="flex sm:flex-row flex-col gap-3 justify-between items-center">
+                    <p class="">
+                        © 2025 Restrochef. All rights reserved.
+                    </p>
+                    <ul class="flex items-center gap-4">
+                        <li class="hover:text-primary  transition-all duration-300">
+                            <a href="javascript:void(0)"><i class="fa-brands fa-facebook-f"></i></a> 
+                        </li>
+                        <li class="hover:text-primary  transition-all duration-300">
+                            <a href="javascript:void(0)"><i class="fa-brands fa-instagram"></i></a>                             
+                        </li>
+                        <li class="hover:text-primary  transition-all duration-300">
+                            <a href="javascript:void(0)"><i class="fa-brands fa-pinterest-p"></i></a> 
+                        </li>
+                        <li class="hover:text-primary  transition-all duration-300">
+                            <a href="javascript:void(0)"><i class="fa-brands fa-youtube"></i></a>                            
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="./assets/js/main.js" defer></script>
+</body>
+</html>
