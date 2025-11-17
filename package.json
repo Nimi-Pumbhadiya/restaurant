@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "dev": "tailwindcss -i ./src/assets/css/style.css -o ./src/assets/css/tailwind.css --watch"
+    "dev": "tailwindcss -i ./src/assets/css/style.css -o ./src/assets/css/tailwind.css --watch",
+    "build": "tailwindcss -i ./src/assets/css/style.css -o ./src/assets/css/tailwind.css --minify"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.21",
